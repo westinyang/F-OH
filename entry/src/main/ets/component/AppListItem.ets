@@ -72,9 +72,8 @@ export default struct AppListItem {
 
       // 中 应用信息
       Column() {
-        Text(this.appInfo.name).fontSize(16).margin({top: 2, bottom: 5})
-        Text(this.appInfo.desc)
-          .fontSize(12).maxLines(2).textOverflow({overflow: TextOverflow.Ellipsis})
+        Text(this.appInfo.name).fontSize(16).margin({top: 2, bottom: 5}).maxLines(1).textOverflow({overflow: TextOverflow.Ellipsis})
+        Text(this.appInfo.desc).fontSize(12).maxLines(2).textOverflow({overflow: TextOverflow.Ellipsis})
       }
       .height('100%')
       .margin({left: 10, right: 10})
