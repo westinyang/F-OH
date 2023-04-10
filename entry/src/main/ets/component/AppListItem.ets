@@ -217,6 +217,7 @@ export default struct AppListItem {
           this.appInfo.status = AppStatus.NOT_INSTALLED;
           this.appInfo.actionText = AppActionText.INSTALL;
         } else {
+          this.mainAbilityName = data.hapModulesInfo[0].mainElementName;
           // 获取成功
           hilog.info(0x0000, 'testTag', 'getBundleInfo successfully: %{public}s', JSON.stringify(data));
           // 打开应用
