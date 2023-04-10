@@ -16,7 +16,9 @@
  */
 
 import {AppType} from '../model/AppInfo';
+import Home from './Home';
 import App from './App';
+import Settings from './Settings';
 
 @Entry
 @Component
@@ -45,14 +47,7 @@ struct Index {
     Column() {
       Tabs({ barPosition: BarPosition.End, controller: this.controller }) {
         TabContent() {
-          Column() {
-            Text('首页')
-              .fontSize(36)
-              .fontColor('#182431')
-              .fontWeight(500)
-              .opacity(0.4)
-              .margin({ top: 30, bottom: 56.5 })
-          }.width('100%')
+          Home()
         }.tabBar(this.TabBarBuilder(0, '首页', $r('app.media.ic_home_normal'), $r('app.media.ic_home_active')))
 
         TabContent() {
@@ -64,14 +59,7 @@ struct Index {
         }.tabBar(this.TabBarBuilder(2, '游戏', $r('app.media.ic_game_normal'), $r('app.media.ic_game_active')))
 
         TabContent() {
-          Column() {
-            Text('设置')
-              .fontSize(36)
-              .fontColor('#182431')
-              .fontWeight(500)
-              .opacity(0.4)
-              .margin({ top: 30, bottom: 56.5 })
-          }.width('100%')
+          Settings()
         }.tabBar(this.TabBarBuilder(3, '设置', $r('app.media.ic_search_normal'), $r('app.media.ic_search_active')))
       }
       .vertical(false)

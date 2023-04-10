@@ -25,7 +25,7 @@ export default struct App {
   @State appList: AppInfo[] = []
 
   aboutToAppear() {
-    DataSource.getAppList(this.appType, (data)=>{
+    DataSource.getAppList(this.appType, (data, totalCount)=>{
       this.appList = data;
     })
   }
@@ -75,7 +75,6 @@ export default struct App {
           }
           .width('100%')
           .margin({top: 7.5, bottom: 7.5})
-          .backgroundColor('#FFFFFF')
         }
         .edgeEffect(EdgeEffect.Spring)
         .width('100%')
@@ -87,6 +86,6 @@ export default struct App {
     }
     .width('100%')
     .height('100%')
-    .backgroundColor('#FFFFFF')
+    .backgroundColor('#ffffff')
   }
 }

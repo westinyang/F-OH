@@ -45,10 +45,10 @@ class DataSource {
         })
         DataSource.allAppList = tmpList;
         // 过滤类型
-        let filterData = DataSource.allAppList.filter((item, index, array)=>{
+        let filterData: AppInfo[] = DataSource.allAppList.filter((item, index, array)=>{
           return item.type == appType;
         })
-        success(filterData);
+        success(filterData, dataArr.length);
       } else {
         console.info('error:' + JSON.stringify(err));
         httpRequest.destroy();
