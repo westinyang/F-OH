@@ -32,6 +32,18 @@
       },
       {
         "name": "ohos.permission.INSTALL_BUNDLE",
+      },
+      {
+        "name": "ohos.permission.GET_BUNDLE_INFO",
+      },
+      {
+        "name": "ohos.permission.GET_BUNDLE_INFO_PRIVILEGED",
+      },
+      {
+        "name": "ohos.permission.REMOVE_CACHE_FILES",
+      },
+      {
+        "name": "ohos.permission.CHANGE_ABILITY_ENABLED_STATE",
       }
     ],
     "deliveryWithInstall": true,
