@@ -17,6 +17,10 @@
 
 import { AppType } from '../model/AppInfo';
 import { DataSource } from '../data/DataSource';
+import { HomePageData } from '../model/HomePageData';
+import promptAction from '@ohos.promptAction';
+
+const ToastDuration = 2000
 
 @Component
 export default struct Home {
@@ -35,7 +39,15 @@ export default struct Home {
   @State appCount: number = 0;
   @State gameCount: number = 0;
 
+  @State homePageData: HomePageData = new HomePageData({});
+
   aboutToAppear() {
+    DataSource.getHomePageData((data) =>{
+      this.homePageData = data;
+    }, (err) => {
+      promptAction.showToast({ message: '网路异常', duration: ToastDuration });
+    });
+
     DataSource.getAppList(AppType.APP, (data, totalCount)=>{
       this.totalCount = totalCount;
       this.appCount = (data as []).length;
@@ -157,7 +169,7 @@ export default struct Home {
                 step: this.step,
                 loop: this.loop,
                 fromStart: this.fromStart,
-                src: this.src
+                src: this.homePageData.announcement || HomePageData.defaultAnnouncement
               })
                 .width('100%')
                 .height(50)
@@ -176,7 +188,7 @@ export default struct Home {
                   console.info('Marquee animation complete onFinish')
                 })
 
-            }.margin({top: 15})
+            }.margin({top: 15}).visibility(this.homePageData.showAnnouncement ? Visibility.Visible : Visibility.None)
 
           }
           .width('100%')
