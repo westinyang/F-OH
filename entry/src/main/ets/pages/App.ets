@@ -41,21 +41,20 @@ export default struct App {
   }
 
   build() {
-    Column() {
-      // 页面标题
-      Navigation()
-        .title(this.NavigationTitle())
-        .hideToolBar(true)
-        .height(56)
-        .width('100%')
-        .titleMode(NavigationTitleMode.Mini)
-        .hideBackButton(true)
-        .border({width: {bottom: 0.5}, color: '#c9c9c9'})
-        .padding({left: 15, right: 15})
+    Stack({ alignContent: Alignment.TopStart }) {
+      Column() {
+        // 页面标题
+        Navigation()
+          .title(this.NavigationTitle())
+          .hideToolBar(true)
+          .height(56)
+          .width('100%')
+          .titleMode(NavigationTitleMode.Mini)
+          .hideBackButton(true)
+          .border({width: {bottom: 0.5}, color: '#c9c9c9'})
+          .padding({left: 15, right: 15})
 
-      // 应用列表
-      Scroll() {
-        Stack({ alignContent: Alignment.Top }) {
+        Scroll() {
           Column() {
             List({ space: 15, initialIndex: 0 }) {
               ForEach(this.appList, (item: AppInfo) => {
@@ -78,11 +77,16 @@ export default struct App {
           .margin({top: 7.5, bottom: 7.5})
           .backgroundColor('#FFFFFF')
         }
+        .edgeEffect(EdgeEffect.Spring)
+        .width('100%')
+        .height('auto')
+        .margin({bottom: 56})
       }
-      .edgeEffect(EdgeEffect.Spring)
       .width('100%')
       .height('100%')
-      .padding({bottom: 56})
     }
+    .width('100%')
+    .height('100%')
+    .backgroundColor('#FFFFFF')
   }
 }
