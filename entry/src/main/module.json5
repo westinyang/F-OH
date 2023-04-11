@@ -44,6 +44,15 @@
       },
       {
         "name": "ohos.permission.CHANGE_ABILITY_ENABLED_STATE",
+      },
+      {
+        "name": "ohos.permission.READ_MEDIA",
+      },
+      {
+        "name": "ohos.permission.WRITE_MEDIA",
+      },
+      {
+        "name": "ohos.permission.MEDIA_LOCATION",
       }
     ],
     "deliveryWithInstall": true,
