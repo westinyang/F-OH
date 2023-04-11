@@ -8,7 +8,7 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 
 ## 附属项目
 
-- [F-OH Data](http://170.178.208.105:3000/ohos-dev/F-OH-Data) `F-OH 所有应用程序的元数据，开发者在这里PR提交自己的开源应用（自建Git服务）`
+- [F-OH Data](http://170.178.208.105:3000/ohos-dev/F-OH-Data) `F-OH 所有应用程序的元数据，开发者在这里PR提交自己的应用（自建Git服务）`
 - [F-OH Website](https://gitee.com/ohos-dev/foh-website) `F-OH 网站的仓库（待开发）`
 
 ## 下载安装
