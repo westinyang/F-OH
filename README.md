@@ -1,5 +1,7 @@
 # F-OH
 
+<img src="entry/src/main/resources/base/media/icon.png" width="128px" />
+
 ## 项目介绍
 
 F-OH 是一个 OpenHarmony 平台上 FOSS（Free and Open Source Software，自由开源软件）的应用中心，并提供下载安装支持
