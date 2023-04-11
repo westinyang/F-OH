@@ -17,6 +17,16 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 
 - https://gitee.com/ohos-dev/foh/releases
 
+## 提交应用
+
+> 开发初期，为了最大程度减小后端开发和服务器的投入成本，暂时用自建的Git服务来共同协作（因为在这里会风控滥用链接）
+
+- [F-OH Data](http://170.178.208.105:3000/ohos-dev/F-OH-Data)
+- 上面的仓库在我自建的Gogs内，F-OH 所有应用程序的元数据
+- 开发者需要注册账号，Fork此仓库，添加自己的应用元数据、安装包和图标，并提交PR
+- 详细说明请点进上面的仓库看README.md
+- 仅收录开源应用
+
 ## 开发计划
 
 客户端
@@ -55,5 +65,14 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 <img src="screenshot/01.jpg" width="300px" />&emsp;<img src="screenshot/02.jpg" width="300px" />
 
 ## 视频演示
+
+x
+
+## 开源许可
+
+- 该程序是免费的软件，你可以按照自己的意愿使用、研究和改进它。具体来说，你可以根据自由软件基金会发布的GNU通用公共许可证的条款重新分配和/或对其进行修改，该版本是该许可证的第3版
+- 一些图标是由 [OpenHarmony官方示例](https://gitee.com/openharmony/applications_app_samples) 的开发人员制作
+
+## 捐助赞赏
 
 x
