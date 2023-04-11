@@ -109,6 +109,11 @@ export default struct AppListItem {
 
   appAction() {
     if (this.appInfo.status == AppStatus.NOT_INSTALLED) {
+      // 校验hapUrl
+      if (!this.appInfo.hapUrl) {
+        promptAction.showToast({ message: '应用下载链接无效', duration: ToastDuration });
+        return;
+      }
       // 未安装（下载或下载并安装）
       this.installLoading = true;
       this.downloadApp()
