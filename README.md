@@ -52,7 +52,7 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 
 ## 截图预览
 
-x
+<img src="screenshot/01.jpg" width="300px" />&emsp;<img src="screenshot/02.jpg" width="300px" />
 
 ## 视频演示
 
