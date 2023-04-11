@@ -70,7 +70,7 @@ x
 
 ## 开源许可
 
-- 该程序是自由软件，你可以按照自己的意愿使用、研究和改进它。具体来说，你可以根据自由软件基金会发布的 [GNU通用公共许可证](https://www.gnu.org/licenses/gpl.html) 的条款重新分配和/或对其进行修改，该版本是该许可证的第3版
+- 本项目是以GPLv3许可开源，你可以根据自由软件基金会发布的 [GNU通用公共许可证](https://www.gnu.org/licenses/gpl.html) 的条款重新分配和/或对其进行修改
 - 一些图标是由 [OpenHarmony官方示例](https://gitee.com/openharmony/applications_app_samples) 的开发人员制作
 
 ## 捐助赞赏
