@@ -63,7 +63,7 @@ export default struct AppListItem {
     }) {
       // 左 应用图标
       Column() {
-        Image(this.appInfo.icon || $r('app.media.icon'))
+        Image(this.appInfo.getIcon() || $r('app.media.icon_default'))
       }
       .width(55)
       .height('100%')
@@ -134,7 +134,7 @@ export default struct AppListItem {
         // 不存在，下载并安装
         try {
           request.downloadFile(globalThis.abilityContext, {
-            url: this.appInfo.hapUrl,
+            url: this.appInfo.getHapUrl(),
             filePath: filePath
           }).then((data) => {
             downloadTask = data;

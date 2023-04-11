@@ -15,6 +15,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+import { ds_server } from '../data/DataSource';
+
 class AppInfo {
   constructor(source: Partial<AppInfo>) {
     Object.assign(this, source);
@@ -39,6 +41,14 @@ class AppInfo {
   status: AppStatus = AppStatus.NOT_INSTALLED
   // 操作按钮文本
   actionText: AppActionText = AppActionText.INSTALL
+
+  getIcon() {
+    return this.icon ? ds_server + this.icon : this.icon;
+  }
+
+  getHapUrl() {
+    return this.hapUrl ? ds_server + this.hapUrl : this.hapUrl;
+  }
 }
 
 enum AppType {

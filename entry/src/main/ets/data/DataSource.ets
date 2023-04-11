@@ -19,13 +19,14 @@ import { HomePageData } from '../model/HomePageData';
 import {AppInfo, AppType} from '../model/AppInfo';
 import http from '@ohos.net.http';
 
-// test
-const ds_address: string = "http://192.168.1.100:8080";
-// prod
-//const ds_address: string = "https://gitee.com/ohos-dev/foh-data/raw/master";
+// TEST 服务器地址
+//const ds_server: string = "http://192.168.1.100:8080";
+// PROD 服务器地址
+const ds_server: string = "http://170.178.208.105:3000/ohos-dev/F-OH-Data/raw/master";
 
-const ds_homePageData: string = ds_address + "/homePageData.json";
-const ds_allAppList: string = ds_address + "/allAppList.json";
+// API Path
+const api_homePageData: string = ds_server + "/homePageData.json";
+const api_allAppList: string = ds_server + "/allAppList.json";
 
 class DataSource {
   public static allAppList: AppInfo[] = [];
@@ -38,7 +39,7 @@ class DataSource {
    */
   static getHomePageData(success: Function, error: Function) {
     let httpRequest = http.createHttp();
-    httpRequest.request(ds_homePageData, {
+    httpRequest.request(api_homePageData, {
       method: http.RequestMethod.GET
     }, (err, data) => {
       if (!err && data.responseCode == 200) {
@@ -58,7 +59,7 @@ class DataSource {
    */
   static getAppList(appType: AppType, success: Function) {
     let httpRequest = http.createHttp();
-    httpRequest.request(ds_allAppList, {
+    httpRequest.request(api_allAppList, {
       method: http.RequestMethod.GET
     }, (err, data) => {
       if (!err && data.responseCode == 200) {
@@ -83,4 +84,4 @@ class DataSource {
   }
 }
 
-export {DataSource}
+export {DataSource, ds_server}
