@@ -8,11 +8,6 @@ F-OH 是一个 OpenHarmony 平台上 FOSS（Free and Open Source Software，自�
 
 F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](https://f-droid.org) 的启发，在这个科技和技术举足轻重的时代，也许 OpenHarmony 背负了太多大家对国产化操作系统及生态的期待，那就让我们用实际行动由开源社区来共同维护和驱动 F-OH 去完成它的使命！
 
-## 附属项目
-
-- [F-OH Data](http://170.178.208.105:3000/ohos-dev/F-OH-Data) `F-OH 所有应用程序的元数据，开发者在这里PR提交自己的应用（自建Git服务）`
-- [F-OH Website](https://gitee.com/ohos-dev/foh-website) `F-OH 网站的仓库（待开发）`
-
 ## 下载安装
 
 - https://gitee.com/ohos-dev/foh/releases
@@ -22,9 +17,8 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 > 开发初期，为了最大程度减小后端开发和服务器的投入成本，暂时用自建的Git服务来协作管理应用的元数据（因为在这里会被FengKong）
 
 - [F-OH Data](http://170.178.208.105:3000/ohos-dev/F-OH-Data)
-- 上面的仓库在我自建的Gogs内，存储 F-OH 所有应用程序的元数据
-- 开发者需要注册账号，Fork这个仓库，添加自己的应用元数据、安装包和图标，并提交PR
-- 细节说明请点进上面的仓库看README.md
+- 这里存放了 F-OH 所有应用程序的元数据，开发者在这里PR提交自己的应用（自建Git服务）
+- 打开这个仓库链接，按照里面的指引去提交自己的应用（很简单的）
 
 ## 开发计划
 
