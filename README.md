@@ -49,6 +49,11 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 - DevEco Studio 3.1 Beta1
 - SDK API9 3.2.10.6 Beta5 伪装替换为 Full-SDK API10 4.0.5.3 Canary1
 
+## 兼容测试
+
+- 因为目前我手上只有 一加6T OpenHarmony 3.2 Beta5
+- 并没有任何标准系统的开发板，所以说横屏、分辨率等问题暂时无法调试优化
+
 ## 截图预览
 
 <img src="screenshot/01.jpg" width="300px" />&emsp;<img src="screenshot/02.jpg" width="300px" />
