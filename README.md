@@ -25,7 +25,6 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 - 上面的仓库在我自建的Gogs内，F-OH 所有应用程序的元数据
 - 开发者需要注册账号，Fork此仓库，添加自己的应用元数据、安装包和图标，并提交PR
 - 详细说明请点进上面的仓库看README.md
-- 仅收录开源应用
 
 ## 开发计划
 
@@ -66,13 +65,17 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 
 ## 视频演示
 
-x
+https://www.bilibili.com/video/BV1dM411N7CG
 
 ## 开源许可
 
 - 本项目是以GPLv3许可开源，你可以根据自由软件基金会发布的 [GNU通用公共许可证](https://www.gnu.org/licenses/gpl.html) 的条款重新分配和/或对其进行修改
 - 一些图标是由 [OpenHarmony官方示例](https://gitee.com/openharmony/applications_app_samples) 的开发人员制作
 
-## 捐助赞赏
+## 赞助打赏
 
-x
+- 我是一名独立开发者，F-OH和其他开源项目都是我的业余投入
+- F-OH的元数据服务器目前是自购自建，一个低配且不稳定的国外VPS
+- 您的赞助将会极大的促进该项目获得更稳定的发展（不限于开发板、服务器赞助等，赞助请私信）
+
+QRCODE
