@@ -158,11 +158,13 @@ export default struct AppListItem {
           }).catch((err) => {
             console.error('Failed to request the download. Cause: ' + JSON.stringify(err));
             this.installLoading = false;
+            promptAction.showToast({ message: '下载失败', duration: ToastDuration });
           })
         } catch (err) {
           // err.message: bad file path   Download File already exists
           console.error('err.code : ' + err.code + ', err.message : ' + err.message);
           this.installLoading = false;
+          promptAction.showToast({ message: '下载失败', duration: ToastDuration });
         }
       }
     }).catch((err) => {
@@ -232,7 +234,7 @@ export default struct AppListItem {
             moduleName: '',
           }).then(() => {
             console.error('startApplication promise success');
-            promptAction.showToast({ message: '打开成功', duration: ToastDuration });
+//            promptAction.showToast({ message: '打开成功', duration: ToastDuration });
           }, (err) => {
             console.error(`startApplication promise error: ${JSON.stringify(err)}`);
             promptAction.showToast({ message: '打开失败：应用不存在', duration: ToastDuration });
