@@ -20,9 +20,7 @@ import {AppInfo, AppType} from '../model/AppInfo';
 import http from '@ohos.net.http';
 
 // TEST 服务器地址
-//const ds_server: string = "http://192.168.1.100:8080";
-// PROD 服务器地址
-const ds_server: string = "http://170.178.208.105:3000/ohos-dev/F-OH-Data/raw/master";
+const ds_server: string = "http://192.168.1.100:8080";
 
 // API Path
 const api_homePageData: string = ds_server + "/homePageData.json";
