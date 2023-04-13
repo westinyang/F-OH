@@ -8,6 +8,11 @@ F-OH 是一个 OpenHarmony 平台上 FOSS（Free and Open Source Software，自�
 
 F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](https://f-droid.org) 的启发，在这个科技和技术举足轻重的时代，也许 OpenHarmony 背负了太多大家对国产化操作系统及生态的期待，那就让我们用实际行动由开源社区来共同维护和驱动 F-OH 去完成它的使命！
 
+开源仓库
+
+- [Gitee](https://gitee.com/ohos-dev/f-oh)
+- [Github](https://github.com/ohos-dev/f-oh)
+
 ## 下载安装
 
 - https://gitee.com/ohos-dev/foh/releases
