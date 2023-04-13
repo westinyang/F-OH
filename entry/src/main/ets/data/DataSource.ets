@@ -19,7 +19,7 @@ import { HomePageData } from '../model/HomePageData';
 import {AppInfo, AppType} from '../model/AppInfo';
 import http from '@ohos.net.http';
 
-// TEST 服务器地址
+// 服务器地址
 const ds_server: string = "http://192.168.1.100:8080";
 
 // API Path
