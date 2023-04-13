@@ -69,10 +69,9 @@ https://www.bilibili.com/video/BV1dM411N7CG
 - 本项目是以GPLv3许可开源，你可以根据自由软件基金会发布的 [GNU通用公共许可证](https://www.gnu.org/licenses/gpl.html) 的条款重新分配和/或对其进行修改
 - 一些图标是由 [OpenHarmony官方示例](https://gitee.com/openharmony/applications_app_samples) 的开发人员制作
 
-## 赞助打赏
+## 赞助捐赠
 
 - 我是一名独立开发者，F-OH和其他开源项目都是我的业余投入
 - F-OH的元数据服务器目前是自购自建，配置较低不太稳定
-- 您的赞助将会极大的促进该项目获得更稳定的发展（不限于开发板、服务器赞助等，赞助请私信）
-
-QRCODE
+- 你的赞助捐赠将是 F-OH 运作的驱动力！（不限于开发板、服务器等）
+- 赞助请私信，捐赠点下面的按钮
