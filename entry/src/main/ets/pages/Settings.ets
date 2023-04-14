@@ -16,6 +16,7 @@
  */
 
 import router from '@ohos.router';
+import WindowStageUtil from '../util/WindowStageUtil';
 
 @Component
 export default struct Settings {

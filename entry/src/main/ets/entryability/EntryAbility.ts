@@ -1,3 +1,4 @@
+import WindowStageUtil from '../util/WindowStageUtil';
 /*
  * Copyright (C) 2023 westinyang https://gitee.com/ohos-dev
  *
@@ -30,9 +31,12 @@ export default class EntryAbility extends UIAbility {
 
     onWindowStageCreate(windowStage: window.WindowStage) {
         globalThis.abilityContext = this.context;
+        globalThis.windowStage = windowStage;
 
         // Main window is created, set main page for this ability
         hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
+
+        WindowStageUtil.setLayoutFullScreen(windowStage, WindowStageUtil.COLOR_WHITE, WindowStageUtil.COLOR_BLACK);
 
         windowStage.loadContent('pages/Index', (err, data) => {
             if (err.code) {

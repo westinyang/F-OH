@@ -19,6 +19,7 @@ import {AppType} from '../model/AppInfo';
 import Home from './Home';
 import App from './App';
 import Settings from './Settings';
+import WindowStageUtil from '../util/WindowStageUtil';
 
 @Entry
 @Component
@@ -69,7 +70,12 @@ struct Index {
       //      .backgroundColor('#F1F3F5')
       .onChange((index: number) => {
         this.currentIndex = index
+        if (index == 3) {
+          WindowStageUtil.setLayoutFullScreen(globalThis.windowStage, '#f3f4f6', WindowStageUtil.COLOR_BLACK);
+        } else {
+          WindowStageUtil.setLayoutFullScreen(globalThis.windowStage, WindowStageUtil.COLOR_WHITE, WindowStageUtil.COLOR_BLACK);
+        }
       })
-    }.width('100%')
+    }.width('100%').padding({top: WindowStageUtil.STATUS_BAR_HEIGHT})
   }
 }

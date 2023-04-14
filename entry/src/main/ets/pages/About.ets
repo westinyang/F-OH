@@ -15,6 +15,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+import WindowStageUtil from '../util/WindowStageUtil';
+
 @Entry
 @Component
 export default struct About {
@@ -52,7 +54,7 @@ export default struct About {
       }
       .width('100%')
       .height('100%')
-    }.width('100%').height('100%').backgroundColor('#f3f4f6')
+    }.width('100%').height('100%').backgroundColor('#f3f4f6').padding({top: WindowStageUtil.STATUS_BAR_HEIGHT})
   }
 
   @Builder LogoAndVersionComponent() {
