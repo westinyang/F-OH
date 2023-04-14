@@ -17,6 +17,8 @@
 
 import WindowStageUtil from '../util/WindowStageUtil';
 
+const APP_VERSION = '1.1.0';
+
 @Entry
 @Component
 export default struct About {
@@ -68,7 +70,7 @@ export default struct About {
         .fontColor('#182431')
         .fontWeight(500)
         .padding({ top: 8 })
-      Text('版本：1.0.0')
+      Text('版本：' + APP_VERSION)
         .fontSize(14)
         .fontColor('#99182431')
         .margin({top: 1})
