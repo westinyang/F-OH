@@ -60,7 +60,7 @@ export default struct About {
       Image($r("app.media.icon"))
         .height(72)
         .width(72)
-        .borderRadius(16)
+        .border({width: 0.7, radius: 16, color: '#ebebeb'})
       Text($r('app.string.EntryAbility_label'))
         .fontSize(18)
         .fontColor('#182431')

@@ -110,7 +110,7 @@ export default struct AppListItem {
   appAction() {
     if (this.appInfo.status == AppStatus.NOT_INSTALLED) {
       // 校验hapUrl
-      if (!this.appInfo.hapUrl) {
+      if (!this.appInfo.getHapUrl()) {
         promptAction.showToast({ message: '应用下载链接无效', duration: ToastDuration });
         return;
       }
