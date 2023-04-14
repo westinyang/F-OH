@@ -70,10 +70,11 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 
 https://www.bilibili.com/video/BV1dM411N7CG
 
-## 开源许可
+## 许可声明
 
 - 本项目是以GPLv3许可开源，你可以根据自由软件基金会发布的 [GNU通用公共许可证](https://www.gnu.org/licenses/gpl.html) 的条款重新分配和/或对其进行修改
-- 一些图标是由 [OpenHarmony官方示例](https://gitee.com/openharmony/applications_app_samples) 的开发人员制作
+- 应用底部TabBar的图标是由 [OpenHarmony官方示例](https://gitee.com/openharmony/applications_app_samples) 的开发人员制作的
+- 应用图标用了OpenHarmony官方品牌标志（个人能力有限没能做出满意的logo），如果这样不符合OpenHarmony品牌标志使用规范，请告私信告诉我，我会及时更换！
 
 ## 赞助捐赠
 
