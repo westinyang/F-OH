@@ -58,12 +58,14 @@ enum AppType {
 
 enum AppStatus {
   NOT_INSTALLED = 0,  // 未安装
-  INSTALLED = 1       // 已安装
+  INSTALLED = 1,      // 已安装
+  UPDATABLE = 2,      // 可更新
 }
 
 enum AppActionText {
   OPEN = "打开",
-  INSTALL = "安装"
+  INSTALL = "安装",
+  UPDATE = "更新"
 }
 
 export {AppInfo, AppType, AppStatus, AppActionText}

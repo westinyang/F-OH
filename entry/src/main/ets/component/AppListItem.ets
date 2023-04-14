@@ -29,6 +29,7 @@ const ToastDuration = 1000
 export default struct AppListItem {
   @State appInfo: AppInfo = null;
   @State mainAbilityName: string = '';
+  @State versionCode: string = '';
   @State installLoading: boolean = false;
 
   aboutToAppear() {
@@ -44,9 +45,17 @@ export default struct AppListItem {
         } else {
           // 获取成功
           hilog.info(0x0000, 'testTag', 'getBundleInfo successfully: %{public}s', JSON.stringify(data));
-          this.appInfo.status = AppStatus.INSTALLED;
-          this.appInfo.actionText = AppActionText.OPEN;
+          // 记录包名和版本号
           this.mainAbilityName = data.hapModulesInfo[0].mainElementName;
+          this.versionCode = data.versionName
+          // 校验是否有新版本
+          if (this.appInfo.version == this.versionCode) {
+            this.appInfo.status = AppStatus.INSTALLED;
+            this.appInfo.actionText = AppActionText.OPEN;
+          } else {
+            this.appInfo.status = AppStatus.UPDATABLE;
+            this.appInfo.actionText = AppActionText.UPDATE;
+          }
         }
       });
     } catch (err) {
@@ -108,6 +117,7 @@ export default struct AppListItem {
   }
 
   appAction() {
+
     if (this.appInfo.status == AppStatus.NOT_INSTALLED) {
       // 校验hapUrl
       if (!this.appInfo.getHapUrl()) {
@@ -115,15 +125,18 @@ export default struct AppListItem {
         return;
       }
       // 未安装（下载或下载并安装）
-      this.installLoading = true;
       this.downloadApp()
-    } else {
+    } else if (this.appInfo.status == AppStatus.INSTALLED) {
       // 已安装（打开）
       this.openApp()
+    } else if (this.appInfo.status == AppStatus.UPDATABLE) {
+      // 可更新(更新)
+      this.updateApp()
     }
   }
 
   downloadApp() {
+    this.installLoading = true;
     let _this = this;
     let downloadTask;
 
@@ -173,7 +186,7 @@ export default struct AppListItem {
     });
   }
 
-  // 安装应用
+  // 安装应用 或 更新应用
   installApp(hapPath: string) {
     let hapFilePaths = [hapPath];
     let installParam = {
@@ -188,24 +201,24 @@ export default struct AppListItem {
           this.installLoading = false;
           if (err) {
             console.error('install failed:' + err.message);
-            promptAction.showToast({ message: '安装失败：' + err.message, duration: ToastDuration });
+            promptAction.showToast({ message: this.appInfo.actionText + '失败：' + err.message, duration: ToastDuration });
           } else {
             console.info('install successfully.');
+            promptAction.showToast({ message: this.appInfo.actionText + '成功', duration: ToastDuration });
             // 更改状态和操作文本
             this.appInfo.status = AppStatus.INSTALLED;
             this.appInfo.actionText = AppActionText.OPEN;
-            promptAction.showToast({ message: '安装成功', duration: ToastDuration });
           }
         });
       }).catch(error => {
         console.error('getBundleInstaller failed. Cause: ' + error.message);
         this.installLoading = false;
-        promptAction.showToast({ message: '安装失败：' + error.message, duration: ToastDuration });
+        promptAction.showToast({ message: this.appInfo.actionText + '失败：' + error.message, duration: ToastDuration });
       });
     } catch (error) {
       console.error('getBundleInstaller failed. Cause: ' + error.message);
       this.installLoading = false;
-      promptAction.showToast({ message: '安装失败：' + error.message, duration: ToastDuration });
+      promptAction.showToast({ message: this.appInfo.actionText + '失败：' + error.message, duration: ToastDuration });
     }
   }
 
@@ -247,5 +260,34 @@ export default struct AppListItem {
       this.appInfo.status = AppStatus.NOT_INSTALLED;
       this.appInfo.actionText = AppActionText.INSTALL;
     }
+  }
+
+  updateApp() {
+    this.downloadApp()
+    /*try {
+      promptAction.showDialog({
+        title: '更新提示',
+        message: this.appInfo.name + '：' + this.versionCode + " → " + this.appInfo.version,
+        buttons: [
+          {
+            text: '取消',
+            color: '#000000',
+          },
+          {
+            text: '更新',
+            color: '#3478f6',
+          }
+        ],
+      }).then(data => {
+        console.info('showDialog success, click button: ' + data.index);
+        if (data.index == 1) {
+          this.downloadApp()
+        }
+      }).catch(err => {
+        console.info('showDialog error: ' + err);
+      })
+    } catch (error) {
+      console.error(`showDialog args error code is ${error.code}, message is ${error.message}`);
+    }*/
   }
 }
