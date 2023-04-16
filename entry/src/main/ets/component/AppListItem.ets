@@ -108,7 +108,7 @@ export default struct AppListItem {
           .visibility(this.installLoading ? Visibility.Visible : Visibility.None)
         }
       }
-      .width(60)
+      .width(65)
       .height('100%')
       .flexShrink(0)
       .justifyContent(FlexAlign.Center)
