@@ -76,6 +76,7 @@ struct Index {
           WindowStageUtil.setLayoutFullScreen(globalThis.windowStage, WindowStageUtil.COLOR_WHITE, WindowStageUtil.COLOR_BLACK);
         }
       })
-    }.width('100%').padding({top: WindowStageUtil.STATUS_BAR_HEIGHT})
+    }.width('100%')
+//    .padding({top: WindowStageUtil.STATUS_BAR_HEIGHT})
   }
 }

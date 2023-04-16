@@ -54,7 +54,7 @@ export default class WindowStageUtil {
             console.info('Succeeded in obtaining the main window. Data: ' + JSON.stringify(data));
 
             // 2.实现沉浸式效果。方式二：设置窗口为全屏布局，配合设置导航栏、状态栏的透明度、背景/文字颜色及高亮图标等属性，与主窗口显示保持协调一致。
-            let isLayoutFullScreen = true;
+            let isLayoutFullScreen = false;
             windowClass.setWindowLayoutFullScreen(isLayoutFullScreen, (err) => {
               if (err.code) {
                 console.error('Failed to set the window layout to full-screen mode. Cause:' + JSON.stringify(err));
@@ -65,8 +65,8 @@ export default class WindowStageUtil {
             let sysBarProps = {
               statusBarColor: statusBarColor,
               statusBarContentColor: statusBarContentColor,     // API8+
-//              navigationBarColor: '#ffffff',
-//              navigationBarContentColor: '#000000'  // API8+
+              navigationBarColor: '#f7f7f7',
+              navigationBarContentColor: '#000000'  // API8+
             };
             windowClass.setWindowSystemBarProperties(sysBarProps, (err) => {
               if (err.code) {

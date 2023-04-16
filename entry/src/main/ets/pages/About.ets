@@ -17,7 +17,7 @@
 
 import WindowStageUtil from '../util/WindowStageUtil';
 
-const APP_VERSION = "1.1.2";
+const APP_VERSION = "1.1.3";
 
 @Entry
 @Component
