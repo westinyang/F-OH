@@ -21,7 +21,7 @@ import promptAction from '@ohos.promptAction';
 import router from '@ohos.router';
 
 const ToastDuration = 1000
-const APP_VERSION = "1.1.2";
+const APP_VERSION = "1.2.0";
 
 @Entry
 @Component
