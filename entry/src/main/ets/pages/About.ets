@@ -17,11 +17,17 @@
 
 import WindowStageUtil from '../util/WindowStageUtil';
 
-const APP_VERSION = "1.1.3";
+const APP_VERSION = "1.1.2";
 
 @Entry
 @Component
 export default struct About {
+
+  onPageShow() {
+    console.info('AboutComponent onPageShow');
+    WindowStageUtil.setLayoutFullScreen(globalThis.windowStage, '#f3f4f6', WindowStageUtil.COLOR_BLACK, '#f3f4f6', WindowStageUtil.COLOR_BLACK);
+  }
+
   @Builder NavigationTitle() {
     Column() {
       Text('关于')
@@ -56,7 +62,8 @@ export default struct About {
       }
       .width('100%')
       .height('100%')
-    }.width('100%').height('100%').backgroundColor('#f3f4f6').padding({top: WindowStageUtil.STATUS_BAR_HEIGHT})
+    }.width('100%').height('100%').backgroundColor('#f3f4f6')
+//    .padding({top: WindowStageUtil.STATUS_BAR_HEIGHT})
   }
 
   @Builder LogoAndVersionComponent() {

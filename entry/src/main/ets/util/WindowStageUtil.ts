@@ -42,7 +42,7 @@ export default class WindowStageUtil {
      * @param sBarColor
      * @param sBarContentColor
      */
-    static setLayoutFullScreen(windowStage: window.WindowStage, statusBarColor: string, statusBarContentColor: string) {
+    static setLayoutFullScreen(windowStage: window.WindowStage, statusBarColor: string, statusBarContentColor: string, navigationBarColor: string, navigationBarContentColor: string) {
         // 1.获取应用主窗口
         let windowClass = null;
         windowStage.getMainWindow((err, data) => {
@@ -65,8 +65,8 @@ export default class WindowStageUtil {
             let sysBarProps = {
               statusBarColor: statusBarColor,
               statusBarContentColor: statusBarContentColor,     // API8+
-              navigationBarColor: '#f7f7f7',
-              navigationBarContentColor: '#000000'  // API8+
+              navigationBarColor: navigationBarColor,
+              navigationBarContentColor: navigationBarContentColor  // API8+
             };
             windowClass.setWindowSystemBarProperties(sysBarProps, (err) => {
               if (err.code) {

@@ -29,6 +29,11 @@ struct Index {
   @State currentIndex: number = 0
   private controller: TabsController = new TabsController()
 
+  onPageShow() {
+    console.info('IndexComponent onPageShow');
+    this.changeLFS()
+  }
+
   @Builder TabBarBuilder(index: number, title: string, icon: Resource, iconSelected: Resource) {
     Column() {
       Image(this.currentIndex === index ? iconSelected : icon)
@@ -70,13 +75,17 @@ struct Index {
       //      .backgroundColor('#F1F3F5')
       .onChange((index: number) => {
         this.currentIndex = index
-        if (index == 3) {
-          WindowStageUtil.setLayoutFullScreen(globalThis.windowStage, '#f3f4f6', WindowStageUtil.COLOR_BLACK);
-        } else {
-          WindowStageUtil.setLayoutFullScreen(globalThis.windowStage, WindowStageUtil.COLOR_WHITE, WindowStageUtil.COLOR_BLACK);
-        }
+        this.changeLFS()
       })
     }.width('100%')
 //    .padding({top: WindowStageUtil.STATUS_BAR_HEIGHT})
+  }
+
+  changeLFS() {
+    if (this.currentIndex == 3) {
+      WindowStageUtil.setLayoutFullScreen(globalThis.windowStage, '#f3f4f6', WindowStageUtil.COLOR_BLACK, '#f7f7f7', WindowStageUtil.COLOR_BLACK);
+    } else {
+      WindowStageUtil.setLayoutFullScreen(globalThis.windowStage, WindowStageUtil.COLOR_WHITE, WindowStageUtil.COLOR_BLACK, '#f7f7f7', WindowStageUtil.COLOR_BLACK);
+    }
   }
 }
