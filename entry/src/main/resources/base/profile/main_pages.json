@@ -1,6 +1,8 @@
 {
   "src": [
     "pages/Index",
-    "pages/About"
+    "pages/AboutApp",
+    "pages/AboutAuthor",
+    "pages/Browser"
   ]
 }

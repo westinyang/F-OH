@@ -16,8 +16,9 @@
  */
 
 import {AppInfo, AppType} from '../model/AppInfo';
-import AppListItem from '../component/AppListItem';
+import AppListItem from '../components/AppListItem';
 import { DataSource } from '../data/DataSource';
+import router from '@ohos.router';
 
 @Component
 export default struct App {
@@ -56,7 +57,7 @@ export default struct App {
 
         Scroll() {
           Column() {
-            List({ space: 15, initialIndex: 0 }) {
+            List({ space: 0, initialIndex: 0 }) {
               ForEach(this.appList, (item: AppInfo) => {
                 ListItem() {
                   AppListItem({appInfo: item})
@@ -68,13 +69,13 @@ export default struct App {
             .padding({left: 15, right: 15})
             .divider({
               strokeWidth: 0.5,
-              color: '#cccccc',
+              color: '#d6d6d6',
               startMargin: 65,
               endMargin: 0
             })
           }
           .width('100%')
-          .margin({top: 7.5, bottom: 7.5})
+//          .margin({top: 7.5, bottom: 7.5})
         }
         .edgeEffect(EdgeEffect.Spring)
         .width('100%')

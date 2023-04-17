@@ -22,6 +22,7 @@ import installer from '@ohos.bundle.installer';
 import fs from '@ohos.file.fs';
 import bundleManager from '@ohos.bundle.bundleManager';
 import hilog from '@ohos.hilog';
+import router from '@ohos.router';
 
 const ToastDuration = 1000
 
@@ -64,31 +65,59 @@ export default struct AppListItem {
   }
 
   build() {
+
+    /*
+     * .onClick(() => {
+        router.pushUrl({ url: 'pages/Browser', params: {title: AppInfo.name, url: item.openSourceAddress} });
+      })
+     * */
+
     // 应用信息行
     Flex({
       direction: FlexDirection.Row,
       justifyContent: FlexAlign.SpaceBetween,
       alignItems: ItemAlign.Center
     }) {
-      // 左 应用图标
-      Column() {
-        Image(this.appInfo.getIcon() || $r('app.media.icon_default'))
-      }
-      .width(55)
-      .height('100%')
-      .border({width: 0.7, radius: 13, color: '#ebebeb'})
-      .flexShrink(0)
+      Flex({
+        direction: FlexDirection.Row,
+        justifyContent: FlexAlign.SpaceBetween,
+        alignItems: ItemAlign.Center
+      }) {
+        // 左 应用图标
+        Column() {
+          Image(this.appInfo.getIcon() || $r('app.media.icon_default'))
+        }
+        .width(55)
+        .height(55)
+        .border({ width: 0.7, radius: 13, color: '#ebebeb' })
+        .flexShrink(0)
+//        .backgroundColor('#00f')
 
-      // 中 应用信息
-      Column() {
-        Text(this.appInfo.name).fontSize(16).margin({top: 2, bottom: 5}).maxLines(1).textOverflow({overflow: TextOverflow.Ellipsis})
-        Text(this.appInfo.desc).fontSize(12).maxLines(2).textOverflow({overflow: TextOverflow.Ellipsis})
+        // 中 应用信息
+        Column() {
+          Text(this.appInfo.name)
+            .fontSize(16)
+            .margin({ top: 2, bottom: 5 })
+            .maxLines(1)
+            .textOverflow({ overflow: TextOverflow.Ellipsis })
+          Text(this.appInfo.desc).fontSize(12).maxLines(2).textOverflow({ overflow: TextOverflow.Ellipsis })
+        }
+        .height(55)
+        .margin({ left: 10, right: 10 })
+        .alignItems(HorizontalAlign.Start)
+        .flexGrow(1)
+        .justifyContent(FlexAlign.Start)
+//        .backgroundColor('#ff0')
       }
       .height('100%')
-      .margin({left: 10, right: 10})
-      .alignItems(HorizontalAlign.Start)
-      .flexGrow(1)
-      .justifyContent(FlexAlign.Start)
+      .onClick(()=>{
+        if (this.appInfo.openSourceAddress) {
+          router.pushUrl({ url: 'pages/Browser', params: {title: this.appInfo.name, url: this.appInfo.openSourceAddress} });
+        } else {
+          promptAction.showToast({ message: '开源仓库链接无效', duration: ToastDuration });
+        }
+      })
+//      .backgroundColor('#f00')
 
       // 右 安装按钮
       Column() {
@@ -109,11 +138,12 @@ export default struct AppListItem {
         }
       }
       .width(65)
-      .height('100%')
+      .height(55)
       .flexShrink(0)
       .justifyContent(FlexAlign.Center)
     }
-    .height(55)
+    .height(69.6)
+//    .backgroundColor('#0f0')
   }
 
   appAction() {
