@@ -165,6 +165,7 @@ export default struct Home {
               Text("最新公告").fontSize(20).width('100%').margin({bottom: 10})
 
               Text(this.homePageData.announcement || HomePageData.defaultAnnouncement)
+                .width('100%')
                 .borderRadius(15)
                 .backgroundColor('#f6f6f6')
                 .padding(10)
