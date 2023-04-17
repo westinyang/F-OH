@@ -108,7 +108,7 @@ export default struct AboutApp {
         ListItem() { SettingRow({icon: $r('app.media.ic_gitee'), title: '开源社区', info: 'https://gitee.com/ohos-dev', clickHandler: ()=> {
           router.pushUrl({ url: 'pages/Browser', params: {title: '开源社区', url: 'https://gitee.com/ohos-dev'} });
         }}) }
-        ListItem() { SettingRow({icon: $r('app.media.ic_qq'), title: '开源社区交流群', info: '752399947', clickHandler: ()=> {
+        ListItem() { SettingRow({icon: $r('app.media.ic_qq2'), title: '开源社区交流群', info: '752399947', clickHandler: ()=> {
           promptAction.showToast({ message: '待实现，跳转开源社区交流群', duration: ToastDuration });
         }}) }
       }.divider({ strokeWidth: 0.5, color: '#d6d6d6', startMargin: 58, endMargin: 14 })
