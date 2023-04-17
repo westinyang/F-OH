@@ -169,6 +169,7 @@ export default struct Home {
                 .backgroundColor('#f6f6f6')
                 .padding(10)
                 .fontSize(16)
+                .fontColor('#555555')
 
             }.margin({top: 15}).visibility(this.homePageData.showAnnouncement ? Visibility.Visible : Visibility.None)
 
