@@ -2,8 +2,8 @@
   "app": {
     "bundleName": "org.ohosdev.foh",
     "vendor": "westinyang",
-    "versionCode": 1000004,
-    "versionName": "1.2.0",
+    "versionCode": 1000005,
+    "versionName": "1.2.1",
     "icon": "$media:app_icon",
     "label": "$string:app_name",
     "distributedNotificationEnabled": true
