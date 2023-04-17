@@ -24,17 +24,13 @@ const ToastDuration = 2000
 
 @Component
 export default struct Home {
+  // 搜索
   private swiperController: SwiperController = new SwiperController()
   private controller: SearchController = new SearchController()
   @State changeValue: string = ''
   @State submitValue: string = ''
 
-  @State start: boolean = true
-  private fromStart: boolean = true
-  private step: number = 20
-  private loop: number = Infinity
-  private src: string = "F-OH 是一个 OpenHarmony 平台上 FOSS（Free and Open Source Software，自由开源软件）的应用中心"
-
+  // 应用收录
   @State totalCount: number = 0;
   @State appCount: number = 0;
   @State gameCount: number = 0;
@@ -81,6 +77,7 @@ export default struct Home {
 
         Scroll() {
           Column() {
+            // 搜索
             Search({ value: this.changeValue, placeholder: '应用、游戏...', controller: this.controller })
               .searchButton('搜索')
               .width('100%')
@@ -94,6 +91,7 @@ export default struct Home {
               .onChange((value: string) => {
               }).focusable(false)
 
+            // 滚动图
             Swiper(this.swiperController) {
               Image($r('app.media.main_banner_1')).width('100%').height(150).borderRadius(15)
               Image($r('app.media.main_banner_2')).width('100%').height(150).borderRadius(15)
@@ -113,6 +111,7 @@ export default struct Home {
             })
             .margin({top: 10})
 
+            // 应用收录
             Column() {
               Text("应用收录").fontSize(20).width('100%').margin({bottom: 10})
               Flex({
@@ -161,32 +160,15 @@ export default struct Home {
               }
             }.margin({top: 15})
 
+            // 最新公告
             Column() {
               Text("最新公告").fontSize(20).width('100%').margin({bottom: 10})
 
-              Marquee({
-                start: this.start,
-                step: this.step,
-                loop: this.loop,
-                fromStart: this.fromStart,
-                src: this.homePageData.announcement || HomePageData.defaultAnnouncement
-              })
-                .width('100%')
-                .height(50)
-                .fontColor('#FFFFFF')
-                .fontSize(20)
-                .fontWeight(500)
+              Text(this.homePageData.announcement || HomePageData.defaultAnnouncement)
                 .borderRadius(15)
-                .backgroundColor('#182431')
-                .onStart(() => {
-                  console.info('Marquee animation complete onStart')
-                })
-                .onBounce(() => {
-                  console.info('Marquee animation complete onBounce')
-                })
-                .onFinish(() => {
-                  console.info('Marquee animation complete onFinish')
-                })
+                .backgroundColor('#f6f6f6')
+                .padding(10)
+                .fontSize(16)
 
             }.margin({top: 15}).visibility(this.homePageData.showAnnouncement ? Visibility.Visible : Visibility.None)
 
