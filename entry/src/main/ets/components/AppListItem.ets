@@ -65,13 +65,6 @@ export default struct AppListItem {
   }
 
   build() {
-
-    /*
-     * .onClick(() => {
-        router.pushUrl({ url: 'pages/Browser', params: {title: AppInfo.name, url: item.openSourceAddress} });
-      })
-     * */
-
     // 应用信息行
     Flex({
       direction: FlexDirection.Row,
@@ -84,9 +77,7 @@ export default struct AppListItem {
         alignItems: ItemAlign.Center
       }) {
         // 左 应用图标
-        Column() {
-          Image(this.appInfo.getIcon() || $r('app.media.icon_default'))
-        }
+        Image(this.appInfo.getIcon() || $r('app.media.icon_default'))
         .width(55)
         .height(55)
         .border({ width: 0.7, radius: 13, color: '#ebebeb' })
