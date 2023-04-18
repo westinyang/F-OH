@@ -68,11 +68,18 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 
 ## 截图预览
 
-<img src="screenshot/01.jpg" width="300px" />&emsp;<img src="screenshot/02.jpg" width="300px" />
+<img src="screenshot/01.jpg" width="300px" />
+<img src="screenshot/02.jpg" width="300px" />
+<img src="screenshot/03.jpg" width="300px" />
+<img src="screenshot/04.jpg" width="300px" />
+<img src="screenshot/05.jpg" width="300px" />
+<img src="screenshot/06.jpg" width="300px" />
 
 ## 视频演示
 
-https://www.bilibili.com/video/BV1dM411N7CG
+- [F-OH：OpenHarmony 自由开源软件的应用市场终于诞生啦~ 空前绝后~](https://www.bilibili.com/video/BV1dM411N7CG)
+- [F-OH OpenHarmony应用市场新版 V1.1：更新应用、沉浸状态栏、新图标](https://www.bilibili.com/video/BV1ig4y1u7dD)
+- [F-OH OpenHarmony应用市场新版 V1.2：内嵌浏览器、清空缓存、大量更新兼容优化](https://www.bilibili.com/video/BV1LP411S79y)
 
 ## 许可声明
 
