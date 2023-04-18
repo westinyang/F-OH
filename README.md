@@ -84,8 +84,9 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 ## 许可声明
 
 - 本项目是以GPLv3许可开源，你可以根据自由软件基金会发布的 [GNU通用公共许可证](https://www.gnu.org/licenses/gpl.html) 的条款重新分配和/或对其进行修改
-- 底部TAB图标是由OH官方示例开发者制作的：https://gitee.com/openharmony/applications_app_samples
-- 还有一些图标的出处是在这里：https://www.flaticon.com/packs/basic-user-interface-147
+- 应用图标出处：https://www.flaticon.com/free-icon/ellipse_4674229
+- 底部图标出处：https://gitee.com/openharmony/applications_app_samples
+- 其他图标出处：https://www.flaticon.com/packs/basic-user-interface-147
 
 ## 赞助捐赠
 
