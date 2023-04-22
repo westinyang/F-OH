@@ -72,7 +72,7 @@ export default struct Settings {
             // 第2组
             Column() {
               List() {
-                ListItem() { SettingRow({icon: $r('app.media.ic_delete'), title: '清空缓存', info: '清理全部已下载到本地的应用安装包', clickHandler: ()=> {
+                ListItem() { SettingRow({icon: $r('app.media.ic_delete'), title: '清空缓存', info: '清理全部已下载到本地的应用安装包', showRightArrow: false, clickHandler: ()=> {
                   this.clearCache()
                 }}) }
               }.divider({ strokeWidth: 0.5, color: '#d6d6d6', startMargin: 54, endMargin: 14 })
