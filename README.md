@@ -56,10 +56,10 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 
 ## 开发环境
 
-> 如果没有Full-SDk，可以下载我编译好的：https://www.bilibili.com/opus/775167350060089384
+> [Full-SDK编译和替换指南](https://gitee.com/openharmony/docs/blob/OpenHarmony-3.2-Beta5/zh-cn/application-dev/quick-start/full-sdk-compile-guide.md#/openharmony/docs/blob/OpenHarmony-3.2-Beta5/zh-cn/application-dev/quick-start/full-sdk-switch-guide.md)
 
 - DevEco Studio 3.1 Beta1
-- SDK API9 3.2.10.6 Beta5 伪装替换为 Full-SDK API10 4.0.5.3 Canary1
+- SDK API9 3.2.10.6 Beta5 (Full-SDK)
 
 ## 兼容测试
 
