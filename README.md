@@ -17,7 +17,7 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 
 ## 附属项目
 
-- [F-OH Data](http://170.178.208.105:3000/ohos-dev/F-OH-Data) `存放了 F-OH 所有应用程序的元数据，开发者在这里提交自己的应用`
+- [F-OH Data](http://170.178.208.105:3000/ohos-dev/F-OH-Data) `存放了 F-OH 所有应用程序的元数据，开发者在这里PR提交自己的应用`
 - [F-OH Server](https://gitee.com/ohos-dev/F-OH-Server) `使用 Flask + SQLite 开发的 F-OH 服务端程序，目前主要由 @myyauyau 来维护`
 
 ## 下载安装
