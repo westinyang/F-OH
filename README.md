@@ -24,7 +24,7 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 
 ### 衍生项目
 
-- [F-OH Web](https://gitee.com/ohos-dev/F-OH-Web) `使用 Bootstrap + Flask 实现的前后端一体的 F-OH Web版，并提供应用上传和管理等功能，主要由 @myyauyau 来维护`
+- [F-OH Web](https://gitee.com/ohos-dev/F-OH-Web) `使用 Bootstrap + Flask 实现的前后端一体的 F-OH Web版，并提供应用上传和管理等功能，目前主要由 @myyauyau 来维护`
 
 ## 下载安装
 
