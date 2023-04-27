@@ -15,10 +15,16 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 - [Gitee](https://gitee.com/ohos-dev/f-oh)
 - [Github](https://github.com/ohos-dev/f-oh)
 
-## 附属项目
+### 系列项目
 
+- [F-OH](https://gitee.com/ohos-dev/f-oh) `F-OH OpenHarmony 移动端`
 - [F-OH Data](http://170.178.208.105:3000/ohos-dev/F-OH-Data) `存放了 F-OH 所有应用程序的元数据，开发者在这里PR提交自己的应用`
-- [F-OH Server](https://gitee.com/ohos-dev/F-OH-Server) `使用 Flask + SQLite 开发的 F-OH 服务端程序，目前主要由 @myyauyau 来维护`
+- [F-OH Server](https://gitee.com/ohos-dev/f-oh-server) `F-OH 服务器，提供接口服务、平台管理等（待开发）`
+- [F-OH Website](https://gitee.com/ohos-dev/f-oh-website) `F-OH 网站，包含文档、博客、精选应用等（待开发）`
+
+### 衍生项目
+
+- [F-OH Web](https://gitee.com/ohos-dev/F-OH-Web) `使用 Bootstrap + Flask 实现的前后端一体的 F-OH Web版，并提供应用上传和管理等功能，主要由 @myyauyau 来维护`
 
 ## 下载安装
 
