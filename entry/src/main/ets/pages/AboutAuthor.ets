@@ -26,7 +26,7 @@ const AUTHOR_INFO = "独立开发者 / 开源工作者 / 不忘初心";
 
 @Entry
 @Component
-export default struct AboutAuthor {
+struct AboutAuthor {
 
   onPageShow() {
     console.info('AboutComponent onPageShow');

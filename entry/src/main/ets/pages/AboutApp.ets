@@ -25,7 +25,7 @@ const APP_VERSION = "1.2.1";
 
 @Entry
 @Component
-export default struct AboutApp {
+struct AboutApp {
 
   onPageShow() {
     console.info('AboutComponent onPageShow');

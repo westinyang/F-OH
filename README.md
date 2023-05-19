@@ -67,14 +67,14 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 
 ## 开发环境
 
-> [Full-SDK编译和替换指南](https://gitee.com/openharmony/docs/blob/OpenHarmony-3.2-Beta5/zh-cn/application-dev/quick-start/full-sdk-compile-guide.md#/openharmony/docs/blob/OpenHarmony-3.2-Beta5/zh-cn/application-dev/quick-start/full-sdk-switch-guide.md)
+> [Full-SDK编译和替换指南](https://gitee.com/openharmony/docs/blob/OpenHarmony-3.2-Release/zh-cn/application-dev/quick-start/full-sdk-compile-guide.md)
 
-- DevEco Studio 3.1 Beta1
-- SDK API9 3.2.10.6 Beta5 (Full-SDK)
+- DevEco Studio 3.1 Release
+- SDK API9 3.2.12.5 Release (Full-SDK)
 
 ## 兼容测试
 
-- 因为目前我手上只有 一加6T OpenHarmony 3.2 Beta5
+- 因为目前我手上只有 一加6T OpenHarmony 3.2 Release
 - 并没有任何标准系统的开发板，所以说横屏、分辨率等问题暂时无法调试优化
 
 ## 截图预览
