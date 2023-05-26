@@ -87,9 +87,11 @@ export default struct Home {
               .placeholderFont({ size: 14, weight: 400 })
               .textFont({ size: 14, weight: 400 })
               .onSubmit((value: string) => {
+                promptAction.showToast({ message: '应用太少，无需搜索！', duration: ToastDuration });
               })
               .onChange((value: string) => {
-              }).focusable(false)
+              })
+              .focusable(false)
 
             // 滚动图
             Swiper(this.swiperController) {
@@ -111,9 +113,9 @@ export default struct Home {
             })
             .margin({top: 10})
 
-            // 应用收录
+            // 收录统计
             Column() {
-              Text("应用收录").fontSize(20).width('100%').margin({bottom: 10})
+              Text("收录统计").fontSize(20).width('100%').margin({bottom: 10})
               Flex({
                 direction: FlexDirection.Row,
                 justifyContent: FlexAlign.SpaceBetween,
