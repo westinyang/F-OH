@@ -24,6 +24,7 @@ import WindowStageUtil from '../util/WindowStageUtil';
 @Component
 struct AppDetail {
   @State appInfo: AppInfo = new AppInfo(router.getParams()['appInfo'])
+  @State localVersionName: string = router.getParams()['localVersionName'] || '--';
 
   onPageShow() {
     console.info('AboutComponent onPageShow');

@@ -103,7 +103,7 @@ export default struct AppListItem {
       .height('100%')
       .onClick(()=>{
         if (this.appInfo.hapUrl) {
-          router.pushUrl({ url: 'pages/AppDetail', params: {appInfo: this.appInfo} });
+          router.pushUrl({ url: 'pages/AppDetail', params: {appInfo: this.appInfo, localVersionName: this.versionCode} });
         } else {
           promptAction.showToast({ message: '应用信息无效', duration: ToastDuration });
         }
