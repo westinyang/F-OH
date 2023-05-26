@@ -102,10 +102,10 @@ export default struct AppListItem {
       }
       .height('100%')
       .onClick(()=>{
-        if (this.appInfo.openSourceAddress) {
-          router.pushUrl({ url: 'pages/Browser', params: {title: this.appInfo.name, url: this.appInfo.openSourceAddress} });
+        if (this.appInfo.hapUrl) {
+          router.pushUrl({ url: 'pages/AppDetail', params: {appInfo: this.appInfo} });
         } else {
-          promptAction.showToast({ message: '开源仓库链接无效', duration: ToastDuration });
+          promptAction.showToast({ message: '应用信息无效', duration: ToastDuration });
         }
       })
 //      .backgroundColor('#f00')

@@ -28,7 +28,7 @@ export struct SettingRow {
       Image(this.icon).width(26).height(26).borderRadius(13).margin({ left: 14 })
       Column() {
         Text(this.title).fontSize(16).fontColor('#FF182431').alignSelf(ItemAlign.Start)
-        Text(this.info).fontSize(12).fontColor('#99182431').alignSelf(ItemAlign.Start).margin({top: 4})
+        Text(this.info).fontSize(12).fontColor('#99182431').maxLines(1).alignSelf(ItemAlign.Start).margin({top: 4})
       }.margin({ left: 14 }).alignItems(HorizontalAlign.Center)
       Blank();
       // Text('RightInfo').fontSize(12).fontColor('#99182431').margin({ right: 4 })

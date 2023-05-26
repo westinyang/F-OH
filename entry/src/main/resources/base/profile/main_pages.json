@@ -3,6 +3,7 @@
     "pages/Index",
     "pages/AboutApp",
     "pages/AboutAuthor",
-    "pages/Browser"
+    "pages/Browser",
+    "pages/AppDetail"
   ]
 }
