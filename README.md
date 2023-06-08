@@ -100,11 +100,11 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 - 底部图标出处：https://gitee.com/openharmony/applications_app_samples
 - 其他图标出处：https://www.flaticon.com/packs/basic-user-interface-147
 
-## 赞助捐赠
+## 赞助支持
 
 - 我是一名独立开发者，F-OH和一些开源项目都是我的兴趣投入
 - F-OH的元数据服务器目前是自购自建，配置较低不太稳定
-- 你的赞助捐赠将是 F-OH 运作的驱动力！（不限于开发板、服务器等）
-- 赞助设备请私信，捐赠请扫描二维码
+- 你的赞助支持将是 F-OH 运作的驱动力！（不限于开发板、服务器等）
+- 赞助可私信联系或扫描下方二维码
 
 <img src="screenshot/wx+zfb.png" height="300px" />
