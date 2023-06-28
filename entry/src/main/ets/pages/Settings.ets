@@ -36,6 +36,7 @@ export default struct Settings {
         .fontWeight(500)
         .margin({left: -25})
     }.alignItems(HorizontalAlign.Start)
+    .width('100%')
   }
 
   build() {

@@ -40,6 +40,7 @@ struct AboutAuthor {
         .fontSize(26)
         .fontWeight(500)
     }.alignItems(HorizontalAlign.Start)
+    .width('100%')
   }
 
   build() {
