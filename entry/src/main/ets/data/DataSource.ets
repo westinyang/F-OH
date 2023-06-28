@@ -20,8 +20,6 @@ import {AppInfo, AppType} from '../model/AppInfo';
 import http from '@ohos.net.http';
 
 // 服务器地址
-// http://192.168.1.100:8080
-// http://170.178.208.105:3000/ohos-dev/F-OH-Data/raw/master
 const ds_server: string = "http://192.168.1.100:8080";
 
 // API Path
