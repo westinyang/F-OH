@@ -18,7 +18,7 @@
 import {AppInfo, AppActionText, AppStatus} from '../model/AppInfo';
 import request from '@ohos.request';
 import promptAction from '@ohos.promptAction';
-import installer from '@ohos.bundle.installer';
+// import installer from '@ohos.bundle.installer';
 import fs from '@ohos.file.fs';
 import bundleManager from '@ohos.bundle.bundleManager';
 import hilog from '@ohos.hilog';
@@ -33,7 +33,7 @@ export default struct AppListItem {
   @State versionCode: string = '';
   @State installLoading: boolean = false;
 
-  aboutToAppear() {
+  /*aboutToAppear() {
     // 检查应用是否已经安装，并获取指定包名应用的启动Ability名
     let bundleName = this.appInfo.packageName;
     let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_HAP_MODULE | bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_ABILITY;
@@ -62,7 +62,7 @@ export default struct AppListItem {
     } catch (err) {
       hilog.error(0x0000, 'testTag', 'getBundleInfo failed: %{public}s', err.message);
     }
-  }
+  }*/
 
   build() {
     // 应用信息行
@@ -116,7 +116,8 @@ export default struct AppListItem {
           Button(this.appInfo.actionText.toString())
             .width('100%').height(26).fontSize(14).fontColor('#3478f6').backgroundColor('#eeeeee')
             .onClick(()=>{
-              this.appAction();
+              // this.appAction();
+              promptAction.showToast({ message: '无权限', duration: ToastDuration });
             })
 
           Button() {
@@ -137,7 +138,7 @@ export default struct AppListItem {
 //    .backgroundColor('#0f0')
   }
 
-  appAction() {
+  /*appAction() {
 
     if (this.appInfo.status == AppStatus.NOT_INSTALLED) {
       // 校验hapUrl
@@ -285,7 +286,7 @@ export default struct AppListItem {
 
   updateApp() {
     this.downloadApp()
-    /*try {
+    *//*try {
       promptAction.showDialog({
         title: '更新提示',
         message: this.appInfo.name + '：' + this.versionCode + " → " + this.appInfo.version,
@@ -309,6 +310,6 @@ export default struct AppListItem {
       })
     } catch (error) {
       console.error(`showDialog args error code is ${error.code}, message is ${error.message}`);
-    }*/
-  }
+    }*//*
+  }*/
 }

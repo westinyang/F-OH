@@ -17,7 +17,7 @@
 
 import webview from '@ohos.web.webview';
 import hilog from '@ohos.hilog';
-import parameter from '@ohos.systemparameter'
+// import parameter from '@ohos.systemparameter'
 import router from '@ohos.router'
 import WindowStageUtil from '../util/WindowStageUtil';
 
@@ -31,7 +31,7 @@ struct Browser {
   @State title: string = router.getParams()['title']
   @State url: string = router.getParams()['url']
 
-  @State isPhone: boolean = false
+  @State isPhone: boolean = true
   controller: webview.WebviewController = new webview.WebviewController()
 
   onPageShow() {
@@ -88,7 +88,7 @@ struct Browser {
   }
 
   aboutToAppear() {
-    try {
+    /*try {
       let deviceType = parameter.getSync("const.build.characteristics")
       // 修改为：default 也认为是 phone
       if (deviceType === 'phone' || deviceType === 'default') {
@@ -96,7 +96,7 @@ struct Browser {
       }
     } catch (e) {
       hilog.info(0x0, '[Index]', `getSync unexpected error: ${e}`)
-    }
+    }*/
   }
 
   // 扩展浏览器对象
