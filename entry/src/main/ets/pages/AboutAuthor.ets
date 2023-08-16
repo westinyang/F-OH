@@ -19,6 +19,7 @@ import WindowStageUtil from '../util/WindowStageUtil';
 import { SettingRow } from '../components/Settings';
 import promptAction from '@ohos.promptAction';
 import router from '@ohos.router';
+import { SponsorDialog } from '../components/CustomDialog';
 
 const ToastDuration = 1000
 const AUTHOR_NAME = "westinyang"
@@ -110,7 +111,19 @@ struct AboutAuthor {
           router.pushUrl({ url: 'pages/Browser', params: {title: 'Bilibili', url: 'https://space.bilibili.com/74433635'} });
         }}) }
         ListItem() { SettingRow({icon: $r('app.media.ic_thunder'), title: '赞助作者', info: 'Buy me a coffee', clickHandler: ()=> {
-          promptAction.showToast({ message: '待实现，感谢您的赞助！', duration: ToastDuration });
+          let sponsorDialog: CustomDialogController;
+          sponsorDialog = new CustomDialogController({
+            builder: SponsorDialog({
+              controller: sponsorDialog
+            }),
+            cancel: () => {},
+            autoCancel: true,
+            alignment: DialogAlignment.Default,
+            offset: { dx: 0, dy: 0 },
+            gridCount: 4,
+            customStyle: false
+          })
+          sponsorDialog.open()
         }}) }
       }.divider({ strokeWidth: 0.5, color: '#d6d6d6', startMargin: 58, endMargin: 14 })
     }.borderRadius(18).backgroundColor('#fff')
