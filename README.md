@@ -25,6 +25,8 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 ### 衍生项目
 
 - [F-OH Web](https://gitee.com/ohos-dev/F-OH-Web) `使用 Bootstrap + Flask 实现的前后端一体的 F-OH Web版，并提供接口、应用上传和管理等功能，目前主要由 @myyauyau 来维护`
+- [F-OH PWA](https://gitee.com/ohos-dev/F-OH-PWA) `F-OH的第三方PWA版本，并提供基于Tauri的客户端，目前主要由 @Jesse205 来维护`
+  - 在线预览：http://fohpwa.444404.xyz
 
 ## 下载安装
 
