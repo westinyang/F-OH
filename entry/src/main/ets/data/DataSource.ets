@@ -20,9 +20,9 @@ import {AppInfo, AppType} from '../model/AppInfo';
 import http from '@ohos.net.http';
 
 // 服务器地址
-// 本地调试请拉取F-OH-Data仓库到本地，并启动一个静态资源服务器，应尽量避免使用线上服务器地址
+// 本地调试请拉取F-OH-Data仓库到本地，并启动一个静态资源服务器，使用本地服务器，尽量避免使用线上服务器地址
 // const ds_server: string = "http://192.168.1.100:8080";
-const ds_server: string = "http://gogs.444404.xyz/ohos-dev/F-OH-Data/raw/master";
+const ds_server: string = "";
 
 // API Path
 const api_homePageData: string = ds_server + "/homePageData.json";
