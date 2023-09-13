@@ -18,7 +18,7 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 ### 系列项目
 
 - [F-OH](https://gitee.com/ohos-dev/f-oh) `F-OH OpenHarmony 移动端`
-- [F-OH Data](http://gogs.444404.xyz/ohos-dev/F-OH-Data) `F-OH 所有应用程序的元数据，开发者在这里PR提交自己的应用`
+- [F-OH Data](http://170.178.208.105:3000/ohos-dev/F-OH-Data) `F-OH 所有应用程序的元数据，开发者在这里PR提交自己的应用`
 - [F-OH Server](https://gitee.com/ohos-dev/f-oh-server) `F-OH 服务器，提供接口服务、平台管理等（待开发）`
 - [F-OH Website](https://gitee.com/ohos-dev/f-oh-website) `F-OH 网站，包含文档、博客、精选应用等（待开发）`
 
@@ -26,7 +26,6 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 
 - [F-OH Web](https://gitee.com/ohos-dev/F-OH-Web) `使用 Bootstrap + Flask 实现的前后端一体的 F-OH Web版，并提供接口、应用上传和管理等功能，目前主要由 @myyauyau 来维护`
 - [F-OH PWA](https://gitee.com/ohos-dev/F-OH-PWA) `F-OH的第三方PWA版本，并提供基于Tauri的客户端，目前主要由 @Jesse205 来维护`
-  - 在线预览：http://fohpwa.444404.xyz
 
 ## 下载安装
 
@@ -38,7 +37,7 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 
 > 开发初期，为了最大程度减小后端开发和服务器的投入成本，暂时用自建的Git服务来协作管理应用的元数据
 
-- [F-OH Data](http://gogs.444404.xyz/ohos-dev/F-OH-Data)
+- [F-OH Data](http://170.178.208.105:3000/ohos-dev/F-OH-Data)
 - 这里存放了 F-OH 所有应用程序的元数据，开发者在这里PR提交自己的应用
 - 打开这个仓库链接，按照里面的指引去提交自己的应用（很简单的）
 
