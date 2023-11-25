@@ -12,15 +12,15 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 
 开源仓库
 
-- [Gitee](https://gitee.com/ohos-dev/f-oh)
-- [Github](https://github.com/ohos-dev/f-oh)
+- [Gitee](https://gitee.com/westinyang/f-oh)
+- [Github](https://github.com/westinyang/f-oh)
 
 ### 系列项目
 
-- [F-OH](https://gitee.com/ohos-dev/f-oh) `F-OH OpenHarmony 移动端`
+- [F-OH](https://gitee.com/westinyang/f-oh) `F-OH OpenHarmony 移动端`
 - [F-OH Data](http://74.48.94.162:3000/ohos-dev/F-OH-Data) `F-OH 所有应用程序的元数据，开发者在这里PR提交自己的应用`
-- [F-OH Server](https://gitee.com/ohos-dev/f-oh-server) `F-OH 服务器，提供接口服务、平台管理等（待开发）`
-- [F-OH Website](https://gitee.com/ohos-dev/f-oh-website) `F-OH 网站，包含文档、博客、精选应用等（待开发）`
+- F-OH Server `F-OH 服务器，提供接口服务、平台管理等（待开发）`
+- F-OH Website `F-OH 网站，包含文档、博客、精选应用等（待开发）`
 
 ### 衍生项目
 
@@ -29,7 +29,7 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 
 ## 下载安装
 
-- https://gitee.com/ohos-dev/foh/releases
+- https://gitee.com/westinyang/foh/releases
 
 ## 提交应用
 
@@ -123,5 +123,6 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 | 7   | l*n                                          | 费用   | ￥8.88             | 2023-08-27 |
 | 8   | *凯                                        | 费用   | ￥6.66             | 2023-09-01 |
 | 9   | 乌拉大喵喵                                        | 费用   | ￥50                | 2023-09-04 |
-| 10   | *具                                           | 费用   | ￥10                | 2023-09-16 |
-| 11   | *拉                                           | 费用   | ￥10                | 2023-10-24 |
+| 10  | *具                                           | 费用   | ￥10                | 2023-09-16 |
+| 11  | *拉                                           | 费用   | ￥10                | 2023-10-24 |
+| 12  | *鸣                                           | 费用   | ￥6.66              | 2023-11-18 |
