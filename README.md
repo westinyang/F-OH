@@ -29,7 +29,7 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 
 ## 下载安装
 
-- https://gitee.com/westinyang/foh/releases
+- https://gitee.com/westinyang/f-oh/releases
 
 ## 提交应用
 
