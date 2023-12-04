@@ -18,9 +18,11 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 ### 系列项目
 
 - [F-OH](https://gitee.com/westinyang/f-oh) `F-OH OpenHarmony 移动端`
+- [F-OH X](https://gitee.com/westinyang/f-oh-x) `F-OH 的 ArkUI-X 实现，使其能够运行到更多的平台上`
 - [F-OH Data](http://74.48.94.162:3000/ohos-dev/F-OH-Data) `F-OH 所有应用程序的元数据，开发者在这里PR提交自己的应用`
-- F-OH Server `F-OH 服务器，提供接口服务、平台管理等（待开发）`
-- F-OH Website `F-OH 网站，包含文档、博客、精选应用等（待开发）`
+- [F-OH Server](
+F-OH-Server.md) `F-OH 服务器，提供接口服务、平台管理等（待开发）`
+- [F-OH Website](F-OH-Web.md) `F-OH 网站，包含文档、博客、精选应用等（待开发）`
 
 ### 衍生项目
 
