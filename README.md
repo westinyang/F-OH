@@ -20,9 +20,8 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 ### 系列项目
 
 - [F-OH](https://gitee.com/westinyang/f-oh) `F-OH OpenHarmony 移动端`
-- [F-OH Data](http://74.48.94.162:3000/ohos-dev/F-OH-Data) `F-OH 所有应用程序的元数据，开发者在这里PR提交自己的应用`
-- [F-OH Server](
-F-OH-Server.md) `F-OH 服务器，提供接口服务、平台管理等（待开发）`
+- [F-OH Data](https://gitee.com/westinyang/f-oh-data) `F-OH 所有应用程序的元数据`
+- [F-OH Server](F-OH-Server.md) `F-OH 服务器，提供接口服务、平台管理等（待开发）`
 - [F-OH Website](F-OH-Web.md) `F-OH 网站，包含文档、博客、精选应用等（待开发）`
 
 ### 衍生项目
@@ -34,15 +33,15 @@ F-OH-Server.md) `F-OH 服务器，提供接口服务、平台管理等（待开�
 
 - https://gitee.com/westinyang/f-oh/releases
 
-## 提交应用
+## ~~提交应用~~
 
 > F-OH仅收录自由开源软件，“自由软件必定开源，开源软件未必自由，有些开源许可证对用户过于苛刻，它们就没有被列为自由软件”，引用自由GNU，FSF创始人——Richard Stallman编写的回答：[为什么开源错失了自由软件的重点？](https://www.gnu.org/philosophy/open-source-misses-the-point.zh-cn.html)
 
 > 开发初期，为了最大程度减小后端开发和服务器的投入成本，暂时用自建的Git服务来协作管理应用的元数据
 
-- [F-OH Data](http://74.48.94.162:3000/ohos-dev/F-OH-Data)
-- 这里存放了 F-OH 所有应用程序的元数据，开发者在这里PR提交自己的应用
-- 打开这个仓库链接，按照里面的指引去提交自己的应用（很简单的）
+- [F-OH Data](https://gitee.com/westinyang/f-oh-data)
+- ~~这里存放了 F-OH 所有应用程序的元数据，开发者在这里PR提交自己的应用~~
+- ~~打开这个仓库链接，按照里面的指引去提交自己的应用（很简单的）~~
 
 ## 功能列表
 
@@ -81,6 +80,12 @@ F-OH-Server.md) `F-OH 服务器，提供接口服务、平台管理等（待开�
 - 因为目前我手上只有 一加6T OpenHarmony 3.2 Release
 - 并没有任何标准系统的开发板，所以说横屏、分辨率等问题暂时无法调试优化
 
+## 部署教程
+
+- 拉取 [F-OH Data](https://gitee.com/westinyang/f-oh-data) 仓库到本地，进入此目录，启动一个静态资源服务器
+- 修改客户端源码 `entry/src/main/ets/data/DataSource.ets` 第25行的 `ds_server` 指向你的静态资源服务器地址
+- 重新编译即可
+
 ## 截图预览
 
 <img src="screenshot/01.jpg" width="300px" />
@@ -107,9 +112,9 @@ F-OH-Server.md) `F-OH 服务器，提供接口服务、平台管理等（待开�
 ## 赞助支持
 
 - 我是一名独立开发者，F-OH和一些开源项目都是我的兴趣投入
-- F-OH的元数据服务器目前是自购自建，配置较低不太稳定
-- 您的赞助支持将是 F-OH 运作的驱动力！（不限于开发板、服务器等）
-- 赞助可私信联系或扫描下方二维码（赞助费用请备注“F-OH”或私信告诉我，方便统计到下方赞助列表中）
+- ~~F-OH的元数据服务器目前是自购自建，配置较低不太稳定~~
+- ~~您的赞助支持将是 F-OH 运作的驱动力！（不限于开发板、服务器等）~~
+- ~~赞助可私信联系或扫描下方二维码（赞助费用请备注“F-OH”或私信告诉我，方便统计到下方赞助列表中）~~
 
 <img src="screenshot/wx+zfb.png" height="300px" />
 
