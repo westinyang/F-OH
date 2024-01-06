@@ -4,10 +4,6 @@
 
 ## 项目介绍
 
-> 2023-12-29 [F-OH停服公告](ServerStopAnnouncement.md)  
-
-> 技术咨询来这里 [联系方式](https://gitee.com/westinyang/openharmony-creation/blob/master/README.md)
-
 F-OH 是一个 OpenHarmony 平台上 FOSS（Free and Open Source Software，自由开源软件）的应用中心，并提供下载安装支持
 
 F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](https://f-droid.org) 的启发，也许 OpenHarmony 背负了太多大家对国产化操作系统及生态的期待，那就让我们用实际行动由开源社区来共同维护和驱动 F-OH 去完成它的使命！
@@ -18,6 +14,8 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 
 - [Gitee](https://gitee.com/westinyang/f-oh)
 - [Github](https://github.com/westinyang/f-oh)
+
+> 技术咨询来这里 [联系方式](https://gitee.com/westinyang/openharmony-creation/blob/master/README.md)
 
 ### 系列项目
 
@@ -83,6 +81,8 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 - 并没有任何标准系统的开发板，所以说横屏、分辨率等问题暂时无法调试优化
 
 ## 部署教程
+
+> 2023-12-29 [F-OH停服公告](ServerStopAnnouncement.md)  
 
 - 拉取 [F-OH Data](https://gitee.com/westinyang/f-oh-data) 仓库到本地，进入此目录，启动一个静态资源服务器
 - 修改客户端源码 `entry/src/main/ets/data/DataSource.ets` 第25行的 `ds_server` 指向你的静态资源服务器地址
