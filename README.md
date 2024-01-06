@@ -1,10 +1,12 @@
-> 2023-12-29 [F-OH停服公告](ServerStopAnnouncement.md)
-
 # F-OH
 
 <img src="entry/src/main/resources/base/media/icon.png" width="128px" />
 
 ## 项目介绍
+
+> 2023-12-29 [F-OH停服公告](ServerStopAnnouncement.md)  
+
+> 技术咨询来这里 [联系方式](https://gitee.com/westinyang/openharmony-creation/blob/master/README.md)
 
 F-OH 是一个 OpenHarmony 平台上 FOSS（Free and Open Source Software，自由开源软件）的应用中心，并提供下载安装支持
 
