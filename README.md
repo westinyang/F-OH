@@ -4,6 +4,8 @@
 
 ## 项目介绍
 
+> 技术咨询请来这里：[关于作者](https://kaihongpai.feishu.cn/wiki/CqWLwJRadibxztkrIWZcogWxnXd)
+
 F-OH 是一个 OpenHarmony 平台上 FOSS（Free and Open Source Software，自由开源软件）的应用中心，并提供下载安装支持
 
 F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](https://f-droid.org) 的启发，也许 OpenHarmony 背负了太多大家对国产化操作系统及生态的期待，那就让我们用实际行动由开源社区来共同维护和驱动 F-OH 去完成它的使命！
@@ -14,8 +16,6 @@ F-OH 创建的初衷不论是命名还是愿景都受到了来自 [F-Droid](http
 
 - [Gitee](https://gitee.com/westinyang/f-oh)
 - [Github](https://github.com/westinyang/f-oh)
-
-> 技术咨询来这里 [联系方式](https://gitee.com/westinyang/openharmony-creation/blob/master/README.md)
 
 ### 系列项目
 

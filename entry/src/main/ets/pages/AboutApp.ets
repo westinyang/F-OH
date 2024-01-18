@@ -103,14 +103,11 @@ struct AboutApp {
         ListItem() { SettingRow({icon: $r('app.media.author_avatar'), title: '应用作者', info: 'westinyang', clickHandler: ()=> {
           router.pushUrl({ url: 'pages/AboutAuthor', params: {} });
         }}) }
-        ListItem() { SettingRow({icon: $r('app.media.ic_favorite'), title: '开源仓库', info: 'https://gitee.com/ohos-dev/f-oh', clickHandler: ()=> {
-          router.pushUrl({ url: 'pages/Browser', params: {title: '开源仓库', url: 'https://gitee.com/ohos-dev/f-oh'} });
+        ListItem() { SettingRow({icon: $r('app.media.ic_favorite'), title: '开源仓库', info: 'https://gitee.com/westinyang/f-oh', clickHandler: ()=> {
+          router.pushUrl({ url: 'pages/Browser', params: {title: '开源仓库', url: 'https://gitee.com/westinyang/f-oh'} });
         }}) }
         ListItem() { SettingRow({icon: $r('app.media.ic_gitee'), title: '开源社区', info: 'https://gitee.com/ohos-dev', clickHandler: ()=> {
           router.pushUrl({ url: 'pages/Browser', params: {title: '开源社区', url: 'https://gitee.com/ohos-dev'} });
-        }}) }
-        ListItem() { SettingRow({icon: $r('app.media.ic_qq2'), title: '开源社区交流群', info: '752399947', clickHandler: ()=> {
-          promptAction.showToast({ message: '待实现，跳转开源社区交流群', duration: ToastDuration });
         }}) }
       }.divider({ strokeWidth: 0.5, color: '#d6d6d6', startMargin: 58, endMargin: 14 })
     }.borderRadius(18).backgroundColor('#fff')
