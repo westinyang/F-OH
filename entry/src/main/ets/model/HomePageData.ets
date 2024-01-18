@@ -16,14 +16,15 @@
  */
 
 class HomePageData {
-  static defaultAnnouncement = 'F-OH 是一个 OpenHarmony 平台上 FOSS（Free and Open Source Software，自由开源软件）的应用中心';
+  // static defaultAnnouncement = 'F-OH 是一个 OpenHarmony 平台上 FOSS（Free and Open Source Software，自由开源软件）的应用中心';
+  static defaultAnnouncement = 'F-OH已停服 (2023-04-11 ~ 2023-12-29)，具体可到开源项目主页查看停服公告以及部署教程：https://gitee.com/westinyang/f-oh';
 
   constructor(source: Partial<Object>) {
     Object.assign(this, source);
   }
 
   // 显示公告
-  showAnnouncement: boolean = false;
+  showAnnouncement: boolean = true;
   // 公告内容
   announcement: string = "";
 }
