@@ -112,9 +112,6 @@ struct AboutAuthor {
         ListItem() { SettingRow({icon: $r('app.media.ic_bilibili'), title: 'Bilibili', info: 'https://space.bilibili.com/74433635', clickHandler: ()=> {
           router.pushUrl({ url: 'pages/Browser', params: {title: 'Bilibili', url: 'https://space.bilibili.com/74433635'} });
         }}) }
-        ListItem() { SettingRow({icon: $r('app.media.ic_send'), title: '知识星球', info: '了解/加入开鸿派知识星球', clickHandler: ()=> {
-          router.pushUrl({ url: 'pages/Browser', params: {title: '知识星球', url: 'https://kaihongpai.feishu.cn/wiki/Y4ajwv6uFi73AwkLxgbcdwctn2g'} });
-        }}) }
       }.divider({ strokeWidth: 0.5, color: '#d6d6d6', startMargin: 58, endMargin: 14 })
     }.borderRadius(18).backgroundColor('#fff')
   }
