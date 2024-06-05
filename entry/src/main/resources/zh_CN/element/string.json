@@ -14,212 +14,213 @@
     },
     {
       "name": "version",
-      "value": "version"
+      "value": "版本"
     },
     {
       "name": "app_intro",
-      "value": "App Introduction"
+      "value": "应用简介"
     },
     {
       "name": "app_author",
-      "value": "App Author"
+      "value": "应用作者"
     },
     {
       "name": "repo",
-      "value": "Open Source Repository"
+      "value": "开源仓库"
     },
     {
       "name": "community",
-      "value": "Open Source Community"
+      "value": "开源社区"
     },
     {
       "name": "app_center",
-      "value": "OpenHarmony-Free Open Source  App Center"
+      "value": "OpenHarmony自由开源软件的应用中心"
     },
     {
       "name": "indie_dev",
-      "value": "Independent Developer / Open Source Contributor / Stay True"
+      "value": "独立开发者 / 开源工作者 / 不忘初心"
     },
     {
       "name": "about_author",
-      "value": "About the Author"
+      "value": "关于作者"
     },
     {
       "name": "app",
-      "value": "App"
+      "value": "应用"
     },
     {
       "name": "game",
-      "value": "Game"
+      "value": "游戏"
     },
     {
       "name": "app_details",
-      "value": "App Details"
+      "value": "应用详情"
     },
     {
       "name": "app_tags",
-      "value": "App Tags"
+      "value": "应用标签"
     },
     {
       "name": "app_pkg_name",
-      "value": "App Package Name"
+      "value": "应用包名"
     },
     {
       "name": "current_version",
-      "value": "Current Version"
+      "value": "当前版本"
     },
     {
       "name": "developer",
-      "value": "Developer"
+      "value": "开发者"
     },
     {
       "name": "release_date",
-      "value": "Release Date"
+      "value": "发行时间"
     },
     {
       "name": "app_game_search",
-      "value": "App and Game..."
+      "value": "应用、游戏..."
     },
     {
       "name": "search",
-      "value": "Search"
+      "value": "搜索"
     },
     {
       "name": "few_apps_no_search",
-      "value": "Too Few Apps, No Need to Search!"
+      "value": "应用太少，无需搜索！"
     },
     {
       "name": "inclusion_stats",
-      "value": "Inclusion Statistics"
+      "value": "收录统计"
     },
     {
       "name": "total",
-      "value": "Total"
+      "value": "总计"
     },
     {
       "name": "latest_announcement",
-      "value": "Latest Announcement"
+      "value": "最新公告"
     },
     {
       "name": "home",
-      "value": "Home"
+      "value": "首页"
     },
     {
       "name": "settings",
-      "value": "Settings"
+      "value": "设置"
     },
     {
       "name": "download_management",
-      "value": "Download Management"
+      "value": "下载管理"
     },
     {
       "name": "app_management",
-      "value": "App Management"
+      "value": "应用管理"
     },
     {
       "name": "app_metadata_management",
-      "value": "App Metadata Management"
+      "value": "应用元数据源管理"
     },
     {
       "name": "clear_cache",
-      "value": "Clear Cache"
+      "value": "清空缓存"
     },
     {
       "name": "clear_local_pkgs",
-      "value": "Clear All Locally Downloaded App Installation Packages"
+      "value": "清理全部已下载到本地的应用安装包"
     },
     {
       "name": "about_foh",
-      "value": "About F-OH"
+      "value": "关于F-OH"
     },
     {
       "name": "to_be_implemented",
-      "value": "To Be Implemented"
+      "value": "待实现"
     },
     {
       "name": "confirm_clear_cache",
-      "value": "Confirm to Clear Cache"
+      "value": "确认要清空缓存吗"
     },
     {
       "name": "clear_cache_warning",
-      "value": "This Operation Will Clear All Locally Downloaded App Installation Packages"
+      "value": "此操作将会清理全部已下载到本地的应用安装包"
     },
     {
       "name": "cancel",
-      "value": "Cancel"
+      "value": "取消"
     },
     {
       "name": "confirm",
-      "value": "Confirm"
+      "value": "确认"
     },
     {
       "name": "clear_cache_failed",
-      "value": "Failed to Clear Cache:"
+      "value": "清空缓存失败:"
     },
     {
       "name": "clear_cache_done",
-      "value": "Cache Cleared"
+      "value": "清空缓存完毕"
     },
     {
       "name": "info_invalid",
-      "value": "Application information is invalid"
+      "value": "应用信息无效"
     },
     {
       "name": "download_link_invalid",
-      "value": "Application download link is invalid"
+      "value": "应用下载链接无效"
     },
     {
       "name": "download_failed",
-      "value": "Download failed"
+      "value": "下载失败"
     },
     {
       "name": "open_failed_app_not_found",
-      "value": "Opening failed: application does not exist"
+      "value": "打开失败：应用不存在"
     },
     {
       "name": "fails",
-      "value": "fails："
+      "value": "失败："
     },
     {
       "name": "succeeds",
-      "value": "succeeds"
+      "value": "成功"
     },
     {
       "name": "Copied",
-      "value": "Copied"
+      "value": "已复制"
     },
     {
       "name": "open",
-      "value": "Open"
+      "value": "打开"
     },
     {
       "name": "install",
-      "value": "Install"
+      "value": "安装"
     },
     {
       "name": "update",
-      "value": "Update"
+      "value": "更新"
     },
     {
       "name": "network_error",
-      "value": "Network Error"
+      "value": "网络异常"
     },
     {
       "name": "download_management_pending",
-      "value": "Download management not yet implemented"
+      "value": "待实现，下载管理"
     },
     {
       "name": "app_management_pending",
-      "value": "Application management not yet implemented"
+      "value": "待实现，应用管理"
     },
     {
       "name": "metadata_management_pending",
-      "value": "Application metadata source management not yet implemented"
+      "value": "待实现，应用元数据源管理"
     },
     {
       "name": "default_announcement",
-      "value":  "F-OH has been discontinued (2023-04-11 to 2023-12-29). For details, please visit the open source project homepage to view the discontinuation announcement and deployment instructions: https://gitee.com/westinyang/f-oh"
+      "value":  "F-OH已停服 (2023-04-11 ~ 2023-12-29)，具体可到开源项目主页查看停服公告以及部署教程：https://gitee.com/westinyang/f-oh"
     }
+
 
   ]
 }

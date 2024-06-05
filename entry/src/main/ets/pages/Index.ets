@@ -34,7 +34,7 @@ struct Index {
     this.changeLFS()
   }
 
-  @Builder TabBarBuilder(index: number, title: string, icon: Resource, iconSelected: Resource) {
+  @Builder TabBarBuilder(index: number, title: string|Resource, icon: Resource, iconSelected: Resource) {
     Column() {
       Image(this.currentIndex === index ? iconSelected : icon)
         .width(24)
@@ -54,19 +54,19 @@ struct Index {
       Tabs({ barPosition: BarPosition.End, controller: this.controller }) {
         TabContent() {
           Home()
-        }.tabBar(this.TabBarBuilder(0, '首页', $r('app.media.ic_home_normal'), $r('app.media.ic_home_active')))
+        }.tabBar(this.TabBarBuilder(0, $r('app.string.home'), $r('app.media.ic_home_normal'), $r('app.media.ic_home_active')))
 
         TabContent() {
           App({appType: AppType.APP})
-        }.tabBar(this.TabBarBuilder(1, '应用', $r('app.media.ic_app_normal'), $r('app.media.ic_app_active')))
+        }.tabBar(this.TabBarBuilder(1, $r('app.string.app'), $r('app.media.ic_app_normal'), $r('app.media.ic_app_active')))
 
         TabContent() {
           App({appType: AppType.GAME})
-        }.tabBar(this.TabBarBuilder(2, '游戏', $r('app.media.ic_game_normal'), $r('app.media.ic_game_active')))
+        }.tabBar(this.TabBarBuilder(2, $r('app.string.game'), $r('app.media.ic_game_normal'), $r('app.media.ic_game_active')))
 
         TabContent() {
           Settings()
-        }.tabBar(this.TabBarBuilder(3, '设置', $r('app.media.ic_search_normal'), $r('app.media.ic_search_active')))
+        }.tabBar(this.TabBarBuilder(3, $r('app.string.settings'), $r('app.media.ic_search_normal'), $r('app.media.ic_search_active')))
       }
       .vertical(false)
       .barMode(BarMode.Fixed)

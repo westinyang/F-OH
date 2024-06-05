@@ -22,7 +22,7 @@ import router from '@ohos.router';
 
 const ToastDuration = 1000
 const AUTHOR_NAME = "westinyang"
-const AUTHOR_INFO = "独立开发者 / 开源工作者 / 不忘初心";
+const AUTHOR_INFO = $r('app.string.indie_dev');
 
 @Entry
 @Component
@@ -35,7 +35,7 @@ struct AboutAuthor {
 
   @Builder NavigationTitle() {
     Column() {
-      Text('关于作者')
+      Text($r('app.string.about_author'))
         .fontColor('#182431')
         .fontSize(26)
         .fontWeight(500)

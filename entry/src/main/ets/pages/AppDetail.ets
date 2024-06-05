@@ -33,7 +33,7 @@ struct AppDetail {
 
   @Builder NavigationTitle() {
     Column() {
-      Text('应用详情')
+      Text($r('app.string.app_details'))
         .fontColor('#182431')
         .fontSize(26)
         .fontWeight(500)
@@ -92,14 +92,14 @@ struct AppDetail {
             // 第一组
             Column() {
               List() {
-                ListItem() { InfoRow({icon: $r('app.media.ic_bookmark'), title: '应用标签', info: this.appInfo.tags, showRightArrow: false}) }
-                ListItem() { InfoRow({icon: $r('app.media.ic_app'), title: '应用包名', info: this.appInfo.packageName, showRightArrow: false}) }
-                ListItem() { InfoRow({icon: $r('app.media.ic_flags'), title: '当前版本', info: this.appInfo.version, showRightArrow: false}) }
-                ListItem() { InfoRow({icon: $r('app.media.ic_laptop'), title: '开发者', info: this.appInfo.vender, showRightArrow: false}) }
-                ListItem() { InfoRow({icon: $r('app.media.ic_link'), title: '开源仓库', info: this.appInfo.openSourceAddress, clickHandler: ()=> {
+                ListItem() { InfoRow({icon: $r('app.media.ic_bookmark'), title: $r('app.string.app_tags'), info: this.appInfo.tags, showRightArrow: false}) }
+                ListItem() { InfoRow({icon: $r('app.media.ic_app'), title: $r('app.string.app_pkg_name'), info: this.appInfo.packageName, showRightArrow: false}) }
+                ListItem() { InfoRow({icon: $r('app.media.ic_flags'), title: $r('app.string.current_version'), info: this.appInfo.version, showRightArrow: false}) }
+                ListItem() { InfoRow({icon: $r('app.media.ic_laptop'), title: $r('app.string.developer'), info: this.appInfo.vender, showRightArrow: false}) }
+                ListItem() { InfoRow({icon: $r('app.media.ic_link'), title: $r('app.string.repo'), info: this.appInfo.openSourceAddress, clickHandler: ()=> {
                   router.pushUrl({ url: 'pages/Browser', params: {title: this.appInfo.name, url: this.appInfo.openSourceAddress} });
                 }}) }
-                ListItem() { InfoRow({icon: $r('app.media.ic_send'), title: '发行时间', info: this.appInfo.releaseTime, showRightArrow: false}) }
+                ListItem() { InfoRow({icon: $r('app.media.ic_send'), title: $r('app.string.release_date'), info: this.appInfo.releaseTime, showRightArrow: false}) }
               }.divider({ strokeWidth: 0.5, color: '#d6d6d6', startMargin: 40, endMargin: 0 })
             }.borderRadius(18).backgroundColor('#ffffff')
 

@@ -18,7 +18,7 @@
 @Component
 export struct SettingRow {
   icon?: string | PixelMap | Resource
-  title: string
+  title: string|Resource
   info?: string | Resource
   clickHandler?: (event?: ClickEvent) => void
   showRightArrow?: boolean = true
