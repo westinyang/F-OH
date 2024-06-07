@@ -20,7 +20,7 @@ import pasteboard from '@ohos.pasteboard'
 @Component
 export struct InfoRow {
   icon?: string | PixelMap | Resource
-  title: string
+  title: string | Resource
   info?: string | Resource
   clickHandler?: (event?: ClickEvent) => void
   showRightArrow?: boolean = true
@@ -61,7 +61,7 @@ export struct InfoRow {
         // 提示
         try {
           promptAction.showToast({
-            message: '已复制 ' + this.title,
+            message: getContext(this).resourceManager.getStringSync($r('app.string.Copied')) + this.title,
             duration: 1000,
           });
         } catch (error) {

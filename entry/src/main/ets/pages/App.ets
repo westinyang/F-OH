@@ -33,7 +33,7 @@ export default struct App {
 
   @Builder NavigationTitle() {
     Column() {
-      Text(this.appType == AppType.APP ? '应用' : '游戏')
+      Text(this.appType == AppType.APP ? $r('app.string.app') : $r('app.string.game'))
         .fontColor('#182431')
         .fontSize(26)
         .fontWeight(500)

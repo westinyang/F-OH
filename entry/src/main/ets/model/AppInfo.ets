@@ -35,12 +35,12 @@ class AppInfo {
   tags: string
   openSourceAddress: string
   releaseTime: string
-
   /* 扩展数据 */
   // 应用状态
   status: AppStatus = AppStatus.NOT_INSTALLED
   // 操作按钮文本
-  actionText: AppActionText = AppActionText.INSTALL
+  // actionText: AppActionText = AppActionText.INSTALL
+  actionText: string = getEnumElement(AppActionText.INSTALL);
 
   getIcon() {
     return this.icon ? ds_server + this.icon : this.icon;
@@ -49,6 +49,7 @@ class AppInfo {
   getHapUrl() {
     return this.hapUrl ? ds_server + this.hapUrl : this.hapUrl;
   }
+
 }
 
 enum AppType {
@@ -68,4 +69,16 @@ enum AppActionText {
   UPDATE = "更新"
 }
 
-export {AppInfo, AppType, AppStatus, AppActionText}
+
+// For i18n
+const appActionList = {
+  [AppActionText.OPEN]: getContext(this).resourceManager.getStringSync($r('app.string.open')),
+  [AppActionText.INSTALL]: getContext(this).resourceManager.getStringSync($r('app.string.install')),
+  [AppActionText.UPDATE]: getContext(this).resourceManager.getStringSync($r('app.string.update'))
+}
+
+export default function getEnumElement(variant:AppActionText):string {
+  return appActionList[variant]
+}
+
+export {AppInfo, AppType, AppStatus, AppActionText, getEnumElement}

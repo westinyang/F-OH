@@ -34,7 +34,7 @@ struct AboutApp {
 
   @Builder NavigationTitle() {
     Column() {
-      Text('关于F-OH')
+      Text($r('app.string.about_foh'))
         .fontColor('#182431')
         .fontSize(26)
         .fontWeight(500)
@@ -99,15 +99,15 @@ struct AboutApp {
     // 第一组
     Column() {
       List() {
-        ListItem() { SettingRow({icon: $r('app.media.ic_foh'), title: '应用简介', info: 'OpenHarmony自由开源软件的应用中心', showRightArrow: false, clickHandler: ()=> {}}) }
-        ListItem() { SettingRow({icon: $r('app.media.author_avatar'), title: '应用作者', info: 'westinyang', clickHandler: ()=> {
+        ListItem() { SettingRow({icon: $r('app.media.ic_foh'), title: $r('app.string.app_intro'), info: $r('app.string.app_center'), showRightArrow: false, clickHandler: ()=> {}}) }
+        ListItem() { SettingRow({icon: $r('app.media.author_avatar'), title: $r('app.string.app_author'), info: 'westinyang', clickHandler: ()=> {
           router.pushUrl({ url: 'pages/AboutAuthor', params: {} });
         }}) }
-        ListItem() { SettingRow({icon: $r('app.media.ic_favorite'), title: '开源仓库', info: 'https://gitee.com/westinyang/f-oh', clickHandler: ()=> {
-          router.pushUrl({ url: 'pages/Browser', params: {title: '开源仓库', url: 'https://gitee.com/westinyang/f-oh'} });
+        ListItem() { SettingRow({icon: $r('app.media.ic_favorite'), title: $r('app.string.repo'), info: 'https://gitee.com/westinyang/f-oh', clickHandler: ()=> {
+          router.pushUrl({ url: 'pages/Browser', params: {title: $r('app.string.community'), url: 'https://gitee.com/westinyang/f-oh'} });
         }}) }
-        ListItem() { SettingRow({icon: $r('app.media.ic_gitee'), title: '开源社区', info: 'https://gitee.com/ohos-dev', clickHandler: ()=> {
-          router.pushUrl({ url: 'pages/Browser', params: {title: '开源社区', url: 'https://gitee.com/ohos-dev'} });
+        ListItem() { SettingRow({icon: $r('app.media.ic_gitee'), title: $r('app.string.community'), info: 'https://gitee.com/ohos-dev', clickHandler: ()=> {
+          router.pushUrl({ url: 'pages/Browser', params: {title:$r('app.string.community'), url: 'https://gitee.com/ohos-dev'} });
         }}) }
       }.divider({ strokeWidth: 0.5, color: '#d6d6d6', startMargin: 58, endMargin: 14 })
     }.borderRadius(18).backgroundColor('#fff')

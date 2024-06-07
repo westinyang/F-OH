@@ -41,7 +41,7 @@ export default struct Home {
     DataSource.getHomePageData((data) =>{
       this.homePageData = data;
     }, (err) => {
-      promptAction.showToast({ message: '网路异常', duration: ToastDuration });
+      promptAction.showToast({ message: $r('app.string.network_error'), duration: ToastDuration });
     });
 
     DataSource.getAppList(AppType.APP, (data, totalCount)=>{
@@ -79,8 +79,8 @@ export default struct Home {
         Scroll() {
           Column() {
             // 搜索
-            Search({ value: this.changeValue, placeholder: '应用、游戏...', controller: this.controller })
-              .searchButton('搜索')
+            Search({ value: this.changeValue, placeholder: (Object)($r('app.string.app_game_search')), controller: this.controller })
+              .searchButton(getContext(this).resourceManager.getStringSync($r('app.string.search')))
               .width('100%')
               .height(40)
               .backgroundColor('#F5F5F5')
@@ -88,7 +88,7 @@ export default struct Home {
               .placeholderFont({ size: 14, weight: 400 })
               .textFont({ size: 14, weight: 400 })
               .onSubmit((value: string) => {
-                promptAction.showToast({ message: '应用太少，无需搜索！', duration: ToastDuration });
+                promptAction.showToast({ message: $r('app.string.few_apps_no_search'), duration: ToastDuration });
               })
               .onChange((value: string) => {
               })
@@ -116,7 +116,7 @@ export default struct Home {
 
             // 收录统计
             Column() {
-              Text("收录统计").fontSize(20).width('100%').margin({bottom: 10})
+              Text($r('app.string.inclusion_stats')).fontSize(20).width('100%').margin({bottom: 10})
               Flex({
                 direction: FlexDirection.Row,
                 justifyContent: FlexAlign.SpaceBetween,
@@ -124,7 +124,7 @@ export default struct Home {
               }) {
                 Column() {
                   Column() {
-                    Text('总计').height(30).fontSize(16).fontColor('#333')
+                    Text($r('app.string.total')).height(30).fontSize(16).fontColor('#333')
                   }.width('100%').border({width: {bottom: 1}, color: '#fff'})
                   Column() {
                     Text(this.totalCount.toString()).height(30).fontSize(16).fontColor('#555')
@@ -137,7 +137,7 @@ export default struct Home {
 
                 Column() {
                   Column() {
-                    Text('应用').height(30).fontSize(16).fontColor('#333')
+                    Text($r('app.string.app')).height(30).fontSize(16).fontColor('#333')
                   }.width('100%').border({width: {bottom: 1}, color: '#fff'})
                   Column() {
                     Text(this.appCount.toString()).height(30).fontSize(16).fontColor('#555')
@@ -150,7 +150,7 @@ export default struct Home {
 
                 Column() {
                   Column() {
-                    Text('游戏').height(30).fontSize(16).fontColor('#333')
+                    Text($r('app.string.game')).height(30).fontSize(16).fontColor('#333')
                   }.width('100%').border({width: {bottom: 1}, color: '#fff'})
                   Column() {
                     Text(this.gameCount.toString()).height(30).fontSize(16).fontColor('#555')
@@ -165,7 +165,7 @@ export default struct Home {
 
             // 最新公告
             Column() {
-              Text("最新公告").fontSize(20).width('100%').margin({bottom: 10})
+              Text($r('app.string.latest_announcement')).fontSize(20).width('100%').margin({bottom: 10})
 
               Text(this.homePageData.announcement || HomePageData.defaultAnnouncement)
                 .width('100%')

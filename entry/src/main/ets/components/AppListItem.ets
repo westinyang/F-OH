@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {AppInfo, AppActionText, AppStatus} from '../model/AppInfo';
+import {AppInfo, AppActionText, AppStatus, getEnumElement} from '../model/AppInfo';
 import request from '@ohos.request';
 import promptAction from '@ohos.promptAction';
 import installer from '@ohos.bundle.installer';
@@ -52,10 +52,10 @@ export default struct AppListItem {
           // 校验是否有新版本
           if (this.appInfo.version == this.versionCode) {
             this.appInfo.status = AppStatus.INSTALLED;
-            this.appInfo.actionText = AppActionText.OPEN;
+            this.appInfo.actionText = getEnumElement(AppActionText.OPEN);
           } else {
             this.appInfo.status = AppStatus.UPDATABLE;
-            this.appInfo.actionText = AppActionText.UPDATE;
+            this.appInfo.actionText = getEnumElement(AppActionText.UPDATE);
           }
         }
       });
@@ -105,7 +105,7 @@ export default struct AppListItem {
         if (this.appInfo.hapUrl) {
           router.pushUrl({ url: 'pages/AppDetail', params: {appInfo: this.appInfo, localVersionName: this.versionCode} });
         } else {
-          promptAction.showToast({ message: '应用信息无效', duration: ToastDuration });
+          promptAction.showToast({ message: $r('app.string.info_invalid'), duration: ToastDuration });
         }
       })
 //      .backgroundColor('#f00')
@@ -142,7 +142,7 @@ export default struct AppListItem {
     if (this.appInfo.status == AppStatus.NOT_INSTALLED) {
       // 校验hapUrl
       if (!this.appInfo.getHapUrl()) {
-        promptAction.showToast({ message: '应用下载链接无效', duration: ToastDuration });
+        promptAction.showToast({ message: $r('app.string.download_link_invalid'), duration: ToastDuration });
         return;
       }
       // 未安装（下载或下载并安装）
@@ -187,18 +187,18 @@ export default struct AppListItem {
             downloadTask.on('fail', function callBack(err) {
               console.info('Download task failed. Cause:' + err);
               this.installLoading = false;
-              promptAction.showToast({ message: '下载失败', duration: ToastDuration });
+              promptAction.showToast({ message: $r('app.string.download_failed'), duration: ToastDuration });
             });
           }).catch((err) => {
             console.error('Failed to request the download. Cause: ' + JSON.stringify(err));
             this.installLoading = false;
-            promptAction.showToast({ message: '下载失败', duration: ToastDuration });
+            promptAction.showToast({ message: $r('app.string.download_failed'), duration: ToastDuration });
           })
         } catch (err) {
           // err.message: bad file path   Download File already exists
           console.error('err.code : ' + err.code + ', err.message : ' + err.message);
           this.installLoading = false;
-          promptAction.showToast({ message: '下载失败', duration: ToastDuration });
+          promptAction.showToast({ message: $r('app.string.download_failed'), duration: ToastDuration });
         }
       }
     }).catch((err) => {
@@ -222,24 +222,26 @@ export default struct AppListItem {
           this.installLoading = false;
           if (err) {
             console.error('install failed:' + err.message);
-            promptAction.showToast({ message: this.appInfo.actionText + '失败：' + err.message, duration: ToastDuration });
+            promptAction.showToast({ message: this.appInfo.actionText + getContext(this).resourceManager.getStringSync($r('app.string.fails')) + err.message, duration: ToastDuration });
           } else {
             console.info('install successfully.');
-            promptAction.showToast({ message: this.appInfo.actionText + '成功', duration: ToastDuration });
+            promptAction.showToast({ message: this.appInfo.actionText + getContext(this).resourceManager.getStringSync($r('app.string.succeeds')), duration: ToastDuration });
             // 更改状态和操作文本
             this.appInfo.status = AppStatus.INSTALLED;
-            this.appInfo.actionText = AppActionText.OPEN;
+            this.appInfo.actionText = getEnumElement(AppActionText.OPEN);
           }
         });
       }).catch(error => {
         console.error('getBundleInstaller failed. Cause: ' + error.message);
         this.installLoading = false;
-        promptAction.showToast({ message: this.appInfo.actionText + '失败：' + error.message, duration: ToastDuration });
+        promptAction.showToast({ message: this.appInfo.actionText + getContext(this).resourceManager.getStringSync($r('app.string.fails'))
+          + error.message, duration: ToastDuration });
       });
     } catch (error) {
       console.error('getBundleInstaller failed. Cause: ' + error.message);
       this.installLoading = false;
-      promptAction.showToast({ message: this.appInfo.actionText + '失败：' + error.message, duration: ToastDuration });
+      promptAction.showToast({ message: this.appInfo.actionText + getContext(this).resourceManager.getStringSync($r('app.string.fails'))
+        + error.message, duration: ToastDuration });
     }
   }
 
@@ -254,9 +256,9 @@ export default struct AppListItem {
         if (err) {
           // 获取失败
           hilog.error(0x0000, 'testTag', 'getBundleInfo failed: %{public}s', err.message);
-          promptAction.showToast({ message: '打开失败：应用不存在', duration: ToastDuration });
+          promptAction.showToast({ message: $r('app.string.open_failed_app_not_found'), duration: ToastDuration });
           this.appInfo.status = AppStatus.NOT_INSTALLED;
-          this.appInfo.actionText = AppActionText.INSTALL;
+          this.appInfo.actionText = getEnumElement(AppActionText.INSTALL);
         } else {
           this.mainAbilityName = data.hapModulesInfo[0].mainElementName;
           // 获取成功
@@ -271,15 +273,15 @@ export default struct AppListItem {
 //            promptAction.showToast({ message: '打开成功', duration: ToastDuration });
           }, (err) => {
             console.error(`startApplication promise error: ${JSON.stringify(err)}`);
-            promptAction.showToast({ message: '打开失败：应用不存在', duration: ToastDuration });
+            promptAction.showToast({ message:  $r('app.string.open_failed_app_not_found'), duration: ToastDuration });
           });
         }
       });
     } catch (err) {
       hilog.error(0x0000, 'testTag', 'getBundleInfo failed: %{public}s', err.message);
-      promptAction.showToast({ message: '打开失败：应用不存在', duration: ToastDuration });
+      promptAction.showToast({ message: $r('app.string.open_failed_app_not_found'), duration: ToastDuration });
       this.appInfo.status = AppStatus.NOT_INSTALLED;
-      this.appInfo.actionText = AppActionText.INSTALL;
+      this.appInfo.actionText = getEnumElement(AppActionText.INSTALL);
     }
   }
 
