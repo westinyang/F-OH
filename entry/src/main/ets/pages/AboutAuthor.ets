@@ -19,7 +19,6 @@ import WindowStageUtil from '../util/WindowStageUtil';
 import { SettingRow } from '../components/Settings';
 import promptAction from '@ohos.promptAction';
 import router from '@ohos.router';
-import { SponsorDialog } from '../components/CustomDialog';
 
 const ToastDuration = 1000
 const AUTHOR_NAME = "westinyang"
@@ -101,6 +100,9 @@ struct AboutAuthor {
     // 第一组
     Column() {
       List() {
+        ListItem() { SettingRow({icon: $r('app.media.ic_laptop'), title: 'I\'m westinyang', info: 'https://kaihongpai.feishu.cn/wiki/...', clickHandler: ()=> {
+          router.pushUrl({ url: 'pages/Browser', params: {title: 'I\'m westinyang', url: 'https://kaihongpai.feishu.cn/wiki/CqWLwJRadibxztkrIWZcogWxnXd'} });
+        }}) }
         ListItem() { SettingRow({icon: $r('app.media.ic_gitee'), title: 'Gitee', info: 'https://gitee.com/westinyang', clickHandler: ()=> {
           router.pushUrl({ url: 'pages/Browser', params: {title: 'Gitee', url: 'https://gitee.com/westinyang'} });
         }}) }
@@ -109,21 +111,6 @@ struct AboutAuthor {
         }}) }
         ListItem() { SettingRow({icon: $r('app.media.ic_bilibili'), title: 'Bilibili', info: 'https://space.bilibili.com/74433635', clickHandler: ()=> {
           router.pushUrl({ url: 'pages/Browser', params: {title: 'Bilibili', url: 'https://space.bilibili.com/74433635'} });
-        }}) }
-        ListItem() { SettingRow({icon: $r('app.media.ic_thunder'), title: '赞助作者', info: 'Buy me a coffee', clickHandler: ()=> {
-          let sponsorDialog: CustomDialogController;
-          sponsorDialog = new CustomDialogController({
-            builder: SponsorDialog({
-              controller: sponsorDialog
-            }),
-            cancel: () => {},
-            autoCancel: true,
-            alignment: DialogAlignment.Default,
-            offset: { dx: 0, dy: 0 },
-            gridCount: 4,
-            customStyle: false
-          })
-          sponsorDialog.open()
         }}) }
       }.divider({ strokeWidth: 0.5, color: '#d6d6d6', startMargin: 58, endMargin: 14 })
     }.borderRadius(18).backgroundColor('#fff')
